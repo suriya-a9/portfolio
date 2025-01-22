@@ -86,31 +86,31 @@ const App = () => {
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-2">
-            <Link to="/" onClick={handleNavigation} data-tooltip-id="tooltip"
+            <Link to="/portfolio" onClick={handleNavigation} data-tooltip-id="tooltip"
               data-tooltip-content="Go to Home">
               <BiHomeAlt />
             </Link>
           </div>
           <div className="col-md-2">
-            <Link to="/projects" onClick={handleNavigation} data-tooltip-id="tooltip"
+            <Link to="/portfolio/projects" onClick={handleNavigation} data-tooltip-id="tooltip"
               data-tooltip-content="See My Projects">
               <FaRegFolder />
             </Link>
           </div>
           <div className="col-md-2">
-            <Link to="/experience" onClick={handleNavigation} data-tooltip-id="tooltip"
+            <Link to="/portfolio/experience" onClick={handleNavigation} data-tooltip-id="tooltip"
               data-tooltip-content="My Experience">
               <LuBriefcase />
             </Link>
           </div>
           <div className="col-md-2">
-            <Link to="/tools" onClick={handleNavigation} data-tooltip-id="tooltip"
+            <Link to="/portfolio/tools" onClick={handleNavigation} data-tooltip-id="tooltip"
               data-tooltip-content="Tools & Platforms">
               <LiaToolsSolid />
             </Link>
           </div>
           <div className="col-md-2">
-            <Link to="/about" onClick={handleNavigation} data-tooltip-id="tooltip"
+            <Link to="/portfolio/about" onClick={handleNavigation} data-tooltip-id="tooltip"
               data-tooltip-content="About Me">
               <FiEdit />
             </Link>
@@ -119,23 +119,23 @@ const App = () => {
         </div>
       </div>
       <div className={`banner-static-r`}>
-        <Link to="/" onClick={handleNavigation} data-tooltip-id="tooltip"
+        <Link to="/portfolio" onClick={handleNavigation} data-tooltip-id="tooltip"
           data-tooltip-content="Go to Home">
           <BiHomeAlt />
         </Link>
-        <Link to="/projects" onClick={handleNavigation} data-tooltip-id="tooltip"
+        <Link to="/portfolio/projects" onClick={handleNavigation} data-tooltip-id="tooltip"
           data-tooltip-content="See My Projects">
           <FaRegFolder />
         </Link>
-        <Link to="/experience" onClick={handleNavigation} data-tooltip-id="tooltip"
+        <Link to="/portfolio/experience" onClick={handleNavigation} data-tooltip-id="tooltip"
           data-tooltip-content="My Experience">
           <LuBriefcase />
         </Link>
-        <Link to="/tools" onClick={handleNavigation} data-tooltip-id="tooltip"
+        <Link to="/portfolio/tools" onClick={handleNavigation} data-tooltip-id="tooltip"
           data-tooltip-content="Tools & Platforms">
           <LiaToolsSolid />
         </Link>
-        <Link to="/about" onClick={handleNavigation} data-tooltip-id="tooltip"
+        <Link to="/portfolio/about" onClick={handleNavigation} data-tooltip-id="tooltip"
           data-tooltip-content="About Me">
           <FiEdit />
         </Link>
@@ -169,13 +169,13 @@ const App = () => {
             transition={{ duration: 0.5 }}
           >
             <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/tools" element={<Tools />} />
-              <Route path="/action3" element={<div>Action 3 Page</div>} />
-              <Route path="/separated" element={<div>Separated Link Page</div>} />
+              <Route path="/portfolio" element={<Home />} />
+              <Route path="/portfolio/projects" element={<Projects />} />
+              <Route path="/portfolio/experience" element={<Experience />} />
+              <Route path="/portfolio/about" element={<About />} />
+              <Route path="/portfolio/tools" element={<Tools />} />
+              <Route path="/portfolio/action3" element={<div>Action 3 Page</div>} />
+              <Route path="/portfolio/separated" element={<div>Separated Link Page</div>} />
             </Routes>
           </motion.div>
         </AnimatePresence>
