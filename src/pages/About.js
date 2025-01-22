@@ -49,7 +49,7 @@ const About = () => {
                       <a href="tel:+916384820056"><FaPhoneAlt /> +91 63848 20056</a>
                       <a href="mailto:uriyaprakash@gmail.com"><IoMdMail /> uriyaprakash@gmail.com</a>
                     </div>
-                    📄 <a className="resume" target="_blank" href="assets/resume.pdf">See My Resume <FiDownload /></a>
+                    📄 <a className="resume" target="_blank" href="assets/Suriya Prakash Resume.pdf">See My Resume <FiDownload /></a>
                   </div>
                 </motion.div>
               </div>

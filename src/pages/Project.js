@@ -180,11 +180,24 @@ const Projects = () => {
                     </div>
                 </motion.div>
                 {popup.visible && (
-                    <div className="popup-overlay" onClick={closePopup}>
-                        <div className="popup-content">
+                    <motion.div
+                        className="popup-overlay"
+                        onClick={closePopup}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <motion.div
+                            className="popup-content"
+                            onClick={(e) => e.stopPropagation()} // Prevent click propagation to overlay
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                        >
                             <button className="close-popup" onClick={closePopup}>X</button>
                             <h4>{popup.details.title}</h4>
-                            {/* <p>{popup.details.description}</p> */}
                             <div className="project-objective">
                                 <p><span>Objective :</span> {popup.details.objectives}</p>
                             </div>
@@ -215,8 +228,8 @@ const Projects = () => {
                                     View Project
                                 </a>
                             )}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 )}
             </section >
             <section className="project-section-mobile">
@@ -279,11 +292,24 @@ const Projects = () => {
                     </div>
                 </motion.div>
                 {popup.visible && (
-                    <div className="popup-overlay" onClick={closePopup}>
-                        <div className="popup-content">
+                    <motion.div
+                        className="popup-overlay"
+                        onClick={closePopup}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <motion.div
+                            className="popup-content"
+                            onClick={(e) => e.stopPropagation()} // Prevent click propagation to overlay
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                        >
                             <button className="close-popup" onClick={closePopup}>X</button>
                             <h4>{popup.details.title}</h4>
-                            {/* <p>{popup.details.description}</p> */}
                             <div className="project-objective">
                                 <p><span>Objective :</span> {popup.details.objectives}</p>
                             </div>
@@ -314,9 +340,10 @@ const Projects = () => {
                                     View Project
                                 </a>
                             )}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 )}
+
             </section >
         </>
     )
