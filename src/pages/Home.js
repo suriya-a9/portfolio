@@ -22,7 +22,7 @@ const Home = () => {
             <div className="row">
               <div className="col-sm-12 col-md-4">
                 <div className="sidebar">
-                  <img className="img-fluid" src={"portfolio/assets/profile-pic.webp"} alt="img" />
+                  <img className="img-fluid" src={"assets/profile-pic.webp"} alt="img" />
                   <h4>Suriya Prakash</h4>
                   <p>A Web Developer who has developed countless innovative solutions.</p>
                   <div className="siderbar-icons">
@@ -85,7 +85,7 @@ const Home = () => {
             <div className="row">
               <div className="col-sm-12">
                 <div className="sidebar">
-                  <img className="img-fluid" src={"portfolio/assets/profile-pic.webp"} alt="img" />
+                  <img className="img-fluid" src={"assets/profile-pic.webp"} alt="img" />
                   <h4>Suriya Prakash</h4>
                   <p>A Web Developer who has developed countless innovative solutions.</p>
                   <div className="siderbar-icons">

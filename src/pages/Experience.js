@@ -23,7 +23,7 @@ const Experience = () => {
                         <div className="row">
                             <div className="col-sm-12 col-md-4">
                                 <div className="sidebar">
-                                    <img className="img-fluid" src={"portfolio/assets/profile-pic.webp"} alt="img" />
+                                    <img className="img-fluid" src={"assets/profile-pic.webp"} alt="img" />
                                     <h4>Suriya Prakash</h4>
                                     <p>A Web Developer who has developed countless innovative solutions.</p>
                                     <div className="siderbar-icons">
@@ -43,20 +43,20 @@ const Experience = () => {
                                 >
                                     <h1>Experience &<br /><span>Education</span></h1>
                                     <h2 className="title-experience">Experience</h2>
-                                    <h4 className="experience-title"><img src={"portfolio/assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - Present</span></h4>
+                                    <h4 className="experience-title"><img src={"assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - Present</span></h4>
                                     <p>Full-stack development of scalable web applications using PHP (Laravel) and modern JavaScript frameworks (React.js). Designed and implemented robust backend architectures, including RESTful APIs and database management with MySQL and MongoDB. Developed dynamic, responsive front-end interfaces with React.js, JavaScript (ES6+), HTML5, and CSS3 (Sass), ensuring seamless user experiences. Leveraged Laravel's MVC architecture to handle complex business logic, middleware, and data validation.</p>
                                     <p>Built and customized web solutions using Drupal CMS platforms, integrating modules, themes, and plugins to meet client requirements. Followed best practices for code maintainability, including SOLID principles, PSR standards, and design patterns. Integrated third-party APIs, handled authentication/authorization (OAuth, JWT), and optimized performance for high-traffic applications.</p>
 
                                     <h2 className="title-experience">Education</h2>
                                     <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"portfolio/assets/tc-arts-logo.webp"} alt="img" className="img-fluid" />
+                                        <img src={"assets/tc-arts-logo.webp"} alt="img" className="img-fluid" />
                                         <div className="education-div-content">
                                             <h4 className="experience-title"> TC Arts <span>June 2017 - April 2020</span></h4>
                                             <p>Bachelor of Computer Application</p>
                                         </div>
                                     </div>
                                     <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"portfolio/assets/tmhss-logo.webp"} alt="img" className="img-fluid" />
+                                        <img src={"assets/tmhss-logo.webp"} alt="img" className="img-fluid" />
                                         <div className="education-div-content">
                                             <h4 className="experience-title"> TMHSS <span>June 2015- April 2017</span></h4>
                                             <p>Higher Secondary</p>
@@ -65,7 +65,7 @@ const Experience = () => {
 
                                     <h2 className="title-experience">Certifications</h2>
                                     <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"portfolio/assets/google-logo.webp"} alt="img" className="img-fluid" />
+                                        <img src={"assets/google-logo.webp"} alt="img" className="img-fluid" />
                                         <div className="education-div-content">
                                             <h4 className="experience-title"> Google <span>Dec 2021 - Feb 2022</span></h4>
                                             <p style={{ marginBottom: '0px' }}>Google Data Analytics</p>
@@ -89,7 +89,7 @@ const Experience = () => {
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="sidebar">
-                                    <img className="img-fluid" src={"portfolio/assets/profile-pic.webp"} alt="img" />
+                                    <img className="img-fluid" src={"assets/profile-pic.webp"} alt="img" />
                                     <h4>Suriya Prakash</h4>
                                     <p>A Web Developer who has developed countless innovative solutions.</p>
                                     <div className="siderbar-icons">
@@ -105,20 +105,20 @@ const Experience = () => {
                                 >
                                     <h1>Experience &<br /><span>Education</span></h1>
                                     <h2 className="title-experience">Experience</h2>
-                                    <h4 className="experience-title"><img src={"portfolio/assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - Present</span></h4>
+                                    <h4 className="experience-title"><img src={"assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - Present</span></h4>
                                     <p>Full-stack development of scalable web applications using PHP (Laravel) and modern JavaScript frameworks (React.js). Designed and implemented robust backend architectures, including RESTful APIs and database management with MySQL and MongoDB. Developed dynamic, responsive front-end interfaces with React.js, JavaScript (ES6+), HTML5, and CSS3 (Sass), ensuring seamless user experiences. Leveraged Laravel's MVC architecture to handle complex business logic, middleware, and data validation.</p>
                                     <p>Built and customized web solutions using Drupal CMS platforms, integrating modules, themes, and plugins to meet client requirements. Followed best practices for code maintainability, including SOLID principles, PSR standards, and design patterns. Integrated third-party APIs, handled authentication/authorization (OAuth, JWT), and optimized performance for high-traffic applications.</p>
 
                                     <h2 className="title-experience">Education</h2>
                                     <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"portfolio/assets/tc-arts-logo.webp"} alt="img" className="img-fluid" />
+                                        <img src={"assets/tc-arts-logo.webp"} alt="img" className="img-fluid" />
                                         <div className="education-div-content">
                                             <h4 className="experience-title"> TC Arts <span>June 2017 - April 2020</span></h4>
                                             <p>Bachelor of Computer Application</p>
                                         </div>
                                     </div>
                                     <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"portfolio/assets/tmhss-logo.webp"} alt="img" className="img-fluid" />
+                                        <img src={"assets/tmhss-logo.webp"} alt="img" className="img-fluid" />
                                         <div className="education-div-content">
                                             <h4 className="experience-title"> TMHSS <span>June 2015- April 2017</span></h4>
                                             <p>Higher Secondary</p>
@@ -127,7 +127,7 @@ const Experience = () => {
 
                                     <h2 className="title-experience">Certifications</h2>
                                     <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"portfolio/assets/google-logo.webp"} alt="img" className="img-fluid" />
+                                        <img src={"assets/google-logo.webp"} alt="img" className="img-fluid" />
                                         <div className="education-div-content">
                                             <h4 className="experience-title"> Google <span>Dec 2021 - Feb 2022</span></h4>
                                             <p style={{ marginBottom: '0px' }}>Google Data Analytics</p>

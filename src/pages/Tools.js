@@ -22,7 +22,7 @@ const Tools = () => {
                         <div className="row">
                             <div className="col-sm-12 col-md-4">
                                 <div className="sidebar">
-                                    <img className="img-fluid" src={"portfolio/assets/profile-pic.webp"} alt="img" />
+                                    <img className="img-fluid" src={"assets/profile-pic.webp"} alt="img" />
                                     <h4>Suriya Prakash</h4>
                                     <p>A Web Developer who has developed countless innovative solutions.</p>
                                     <div className="siderbar-icons">
@@ -44,54 +44,54 @@ const Tools = () => {
                                     <div className="tools-list">
                                         <h4>Programming Languages</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/html-logo.webp"} alt="HTML5" />
-                                            <img src={"portfolio/assets/css-logo.webp"} alt="CSS3" />
-                                            <img src={"portfolio/assets/js-logo.webp"} alt="JavaScript" />
-                                            <img src={"portfolio/assets/node-js-logo.webp"} alt="Node.js" />
-                                            <img src={"portfolio/assets/php.webp"} alt="PHP" />
+                                            <img src={"assets/html-logo.webp"} alt="HTML5" />
+                                            <img src={"assets/css-logo.webp"} alt="CSS3" />
+                                            <img src={"assets/js-logo.webp"} alt="JavaScript" />
+                                            <img src={"assets/node-js-logo.webp"} alt="Node.js" />
+                                            <img src={"assets/php.webp"} alt="PHP" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Framework and Libraries</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/react-js-logo.webp"} alt="React.js" />
-                                            <img src={"portfolio/assets/laravel.webp"} alt="Laravel" />
-                                            <img src={"portfolio/assets/bootstrap.webp"} alt="Bootstrap" />
+                                            <img src={"assets/react-js-logo.webp"} alt="React.js" />
+                                            <img src={"assets/laravel.webp"} alt="Laravel" />
+                                            <img src={"assets/bootstrap.webp"} alt="Bootstrap" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>CMS</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/drupal-logo.webp"} alt="Drupal" />
+                                            <img src={"assets/drupal-logo.webp"} alt="Drupal" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Databases</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/mysql.webp"} alt="Mysql" />
-                                            <img src={"portfolio/assets/mongodb-logo.webp"} alt="Mongodb" />
-                                            <img src={"portfolio/assets/postgre-sql-logo.webp"} alt="Postgre-sql" />
+                                            <img src={"assets/mysql.webp"} alt="Mysql" />
+                                            <img src={"assets/mongodb-logo.webp"} alt="Mongodb" />
+                                            <img src={"assets/postgre-sql-logo.webp"} alt="Postgre-sql" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Version Control</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/git-logo.webp"} alt="Git" />
-                                            <img src={"portfolio/assets/GitHub-Logo.webp"} alt="Github" style={{ background: 'white' }} />
+                                            <img src={"assets/git-logo.webp"} alt="Git" />
+                                            <img src={"assets/GitHub-Logo.webp"} alt="Github" style={{ background: 'white' }} />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Tools for Development</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/vs-code-logo.webp"} alt="VS Code" />
-                                            <img src={"portfolio/assets/npm-logo.webp"} alt="NPM" />
-                                            <img src={"portfolio/assets/composer-logo.webp"} alt="Composer" />
+                                            <img src={"assets/vs-code-logo.webp"} alt="VS Code" />
+                                            <img src={"assets/npm-logo.webp"} alt="NPM" />
+                                            <img src={"assets/composer-logo.webp"} alt="Composer" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Currently Learning</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/tailwindcss-logotype-white.svg"} alt="Tailwind" style={{ width: '200px', height: '100px' }} />
+                                            <img src={"assets/tailwindcss-logotype-white.svg"} alt="Tailwind" style={{ width: '200px', height: '100px' }} />
                                         </div>
                                     </div>
                                 </motion.div>
@@ -111,7 +111,7 @@ const Tools = () => {
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="sidebar">
-                                    <img className="img-fluid" src={"portfolio/assets/profile-pic.webp"} alt="img" />
+                                    <img className="img-fluid" src={"assets/profile-pic.webp"} alt="img" />
                                     <h4>Suriya Prakash</h4>
                                     <p>A Web Developer who has developed countless innovative solutions.</p>
                                     <div className="siderbar-icons">
@@ -129,54 +129,54 @@ const Tools = () => {
                                     <div className="tools-list">
                                         <h4>Programming Languages</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/html-logo.webp"} alt="HTML5" />
-                                            <img src={"portfolio/assets/css-logo.webp"} alt="CSS3" />
-                                            <img src={"portfolio/assets/js-logo.webp"} alt="JavaScript" />
-                                            <img src={"portfolio/assets/node-js-logo.webp"} alt="Node.js" />
-                                            <img src={"portfolio/assets/php.webp"} alt="PHP" />
+                                            <img src={"assets/html-logo.webp"} alt="HTML5" />
+                                            <img src={"assets/css-logo.webp"} alt="CSS3" />
+                                            <img src={"assets/js-logo.webp"} alt="JavaScript" />
+                                            <img src={"assets/node-js-logo.webp"} alt="Node.js" />
+                                            <img src={"assets/php.webp"} alt="PHP" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Framework and Libraries</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/react-js-logo.webp"} alt="React.js" />
-                                            <img src={"portfolio/assets/laravel.webp"} alt="Laravel" />
-                                            <img src={"portfolio/assets/bootstrap.webp"} alt="Bootstrap" />
+                                            <img src={"assets/react-js-logo.webp"} alt="React.js" />
+                                            <img src={"assets/laravel.webp"} alt="Laravel" />
+                                            <img src={"assets/bootstrap.webp"} alt="Bootstrap" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>CMS</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/drupal-logo.webp"} alt="Drupal" />
+                                            <img src={"assets/drupal-logo.webp"} alt="Drupal" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Databases</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/mysql.webp"} alt="Mysql" />
-                                            <img src={"portfolio/assets/mongodb-logo.webp"} alt="Mongodb" />
-                                            <img src={"portfolio/assets/postgre-sql-logo.webp"} alt="Postgre-sql" />
+                                            <img src={"assets/mysql.webp"} alt="Mysql" />
+                                            <img src={"assets/mongodb-logo.webp"} alt="Mongodb" />
+                                            <img src={"assets/postgre-sql-logo.webp"} alt="Postgre-sql" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Version Control</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/git-logo.webp"} alt="Git" />
-                                            <img src={"portfolio/assets/GitHub-Logo.webp"} alt="Github" style={{ background: 'white' }} />
+                                            <img src={"assets/git-logo.webp"} alt="Git" />
+                                            <img src={"assets/GitHub-Logo.webp"} alt="Github" style={{ background: 'white' }} />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Tools for Development</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/vs-code-logo.webp"} alt="VS Code" />
-                                            <img src={"portfolio/assets/npm-logo.webp"} alt="NPM" />
-                                            <img src={"portfolio/assets/composer-logo.webp"} alt="Composer" />
+                                            <img src={"assets/vs-code-logo.webp"} alt="VS Code" />
+                                            <img src={"assets/npm-logo.webp"} alt="NPM" />
+                                            <img src={"assets/composer-logo.webp"} alt="Composer" />
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Currently Learning</h4>
                                         <div className="tools-images">
-                                            <img src={"portfolio/assets/tailwindcss-logotype-white.svg"} alt="Tailwind" style={{ width: '200px', height: '100px' }} />
+                                            <img src={"assets/tailwindcss-logotype-white.svg"} alt="Tailwind" style={{ width: '200px', height: '100px' }} />
                                         </div>
                                     </div>
                                 </motion.div>
