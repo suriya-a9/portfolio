@@ -19,7 +19,7 @@
 }
 
 .about-me h4 {
-    color: #b6b4bd33;
+    color: #998f8f;
     font-size: 38px;
     font-weight: bold;
 }
@@ -54,6 +54,7 @@ section.about-section .home-page-content {
     section.about-section-mobile {
         display: none;
     }
+
     section.about-section .home-page-content {
         padding-left: 0px;
         margin: 25px 0px;
