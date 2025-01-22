@@ -1,0 +1,16 @@
+.footer-content h4 {
+    font-size: 16px;
+    color: #998f8f;
+    font-weight: 400;
+    text-align: center;
+}
+
+section.footer {
+    margin: 45px 0px;
+    /* border-top: 1px solid #998f8f; */
+    /* padding-top: 45px; */
+}
+
+.footer-content svg {
+    color: #f46c38;
+}

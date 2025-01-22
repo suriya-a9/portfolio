@@ -1,0 +1,63 @@
+section.experience-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h4.experience-title {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h4.experience-title img {
+    background: white;
+    border-radius: 50px;
+    width: 7%;
+}
+
+h4.experience-title span {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+h2.title-experience {
+    font-size: 60px;
+    color: #998f8f;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 45px;
+}
+
+.education-div img {
+    background: white;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+
+.education-div-content {
+    margin-left: 10px;
+}
+
+@media(max-width: 768px) {
+    section.experience-section .home-page-content {
+        padding-left: 0px;
+    }
+
+    section.experience-section-mobile {
+        display: none;
+    }
+}
+
+@media(min-width: 900px) {
+    section.experience-section-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    section.experience-section {
+        display: none;
+    }
+}

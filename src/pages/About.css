@@ -1,0 +1,82 @@
+.about-me p {
+    font-size: 18px;
+    color: #998f8f;
+    margin-bottom: 10px;
+}
+
+.about-me a {
+    color: #f46c38;
+    text-decoration: none;
+}
+
+.contact {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.contact a {
+    padding: 0px 5px;
+}
+
+.about-me h4 {
+    color: #b6b4bd33;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.about-me a svg {
+    color: white;
+}
+
+a.resume {
+    text-decoration: underline;
+    color: #0d6efd;
+}
+
+a.resume svg {
+    text-decoration: underline;
+    color: #0d6efd;
+}
+
+section.about-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+}
+
+section.about-section .home-page-content {
+    padding-left: 45px;
+    margin: 25px 0px;
+    margin-bottom: 110px;
+}
+
+@media(max-width: 768px) {
+    section.about-section-mobile {
+        display: none;
+    }
+    section.about-section .home-page-content {
+        padding-left: 0px;
+        margin: 25px 0px;
+        margin-bottom: 110px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 900px) {
+    section.about-section-mobile {
+        display: block;
+    }
+
+    section.about-section {
+        display: none;
+    }
+}
+
+@media(min-width: 900px) {
+    section.about-section-mobile {
+        display: none;
+    }
+
+    section.about-section {
+        display: block;
+    }
+}
