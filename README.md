@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! This website showcases my **projects, skills, and experience** as a **Web Developer specializing in React.js**.  
 
-## 🔗 Live Demo  
+## 🔗 Live 
 [Check it out here]https://suriya-a9.github.io/portfolio/
 
 ## 📌 Features  
