@@ -20,8 +20,8 @@ Welcome to my personal portfolio! This website showcases my **projects, skills, 
 
 ## 📬 Contact  
 If you’d like to connect, feel free to reach out:  
-📧 Email: [your-email@example.com](mailto:uriyaprakash@gmail.com)  
-🔗 LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/suriya-prakash-30885818a)  
+📧 Email: [uriyaprakash@gmail.com](mailto:uriyaprakash@gmail.com)  
+🔗 LinkedIn: [https://www.linkedin.com/in/suriya-prakash-30885818a](https://www.linkedin.com/in/suriya-prakash-30885818a)  
 
 ---
 
