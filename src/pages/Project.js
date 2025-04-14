@@ -14,7 +14,7 @@ const Projects = () => {
     const projects = [
         {
             title: "Nova Education Group",
-            description: "This project was developed to support an educational group in its transition from a state-affiliated curriculum to the CBSE framework. The system was built using PHP and is designed to streamline and manage key administrative and academic processes in alignment with CBSE standards.",
+            description: "This project was developed to support an educational group in its transition from a state-affiliated curriculum to the CBSE framework. The system was built using PHP and is designed to streamline and academic processes in alignment with CBSE standards.",
             tags: ["PHP", "Jquery", "CAPTCHA", "HTML", "CSS"],
             objectives: "The objective of this project is to develop a PHP-based system to assist an educational group in transitioning smoothly to the CBSE curriculum. It aims to streamline academic and administrative operations by automating processes such as student data management, syllabus planning. The system ensures compliance with CBSE standards while enhancing efficiency and transparency. It also provides information about teachers, students, and other staffs to foster better communication and engagement.",
             key: ["Student Information System", "Curriculum Mapping", "Staff Details", "Faclities Details", "Gallery", "CBSE Student Details", "Certificates"],
