@@ -43,7 +43,7 @@ const Experience = () => {
                                 >
                                     <h1>Experience &<br /><span>Education</span></h1>
                                     <h2 className="title-experience">Experience</h2>
-                                    <h4 className="experience-title"><img src={"assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - Present</span></h4>
+                                    <h4 className="experience-title"><img src={"assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - March 2025</span></h4>
                                     <p>Full-stack development of scalable web applications using PHP (Laravel) and modern JavaScript frameworks (React.js). Designed and implemented robust backend architectures, including RESTful APIs and database management with MySQL and MongoDB. Developed dynamic, responsive front-end interfaces with React.js, JavaScript (ES6+), HTML5, and CSS3 (Sass), ensuring seamless user experiences. Leveraged Laravel's MVC architecture to handle complex business logic, middleware, and data validation.</p>
                                     <p>Built and customized web solutions using Drupal CMS platforms, integrating modules, themes, and plugins to meet client requirements. Followed best practices for code maintainability, including SOLID principles, PSR standards, and design patterns. Integrated third-party APIs, handled authentication/authorization (OAuth, JWT), and optimized performance for high-traffic applications.</p>
 
