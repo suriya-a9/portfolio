@@ -13,6 +13,24 @@ const Projects = () => {
     const [popup, setPopup] = useState({ visible: false, details: null });
     const projects = [
         {
+            "title": "JK Dry Fruits",
+            "description": "JK Dry Fruits is a modern eCommerce platform designed to deliver premium quality dry fruits and nuts directly to consumers. Built using Next.js and React.js, and powered by MongoDB Atlas, this project ensures a seamless and secure shopping experience with robust features for both customers and administrators.",
+            "tags": ["Next.js", "React.js", "MongoDB Atlas", "Tailwind CSS", "Node.js"],
+            "objectives": "The primary objective of this project was to develop a scalable and user-friendly eCommerce platform that allows customers to browse, wishlist, and purchase dry fruits with ease. The platform also enables secure user authentication, profile management, and order tracking. For administrators, the system offers a feature-rich dashboard to manage products, pages, offers, and customer orders — all through a streamlined backend interface.",
+            "key": [
+                "Customer Registration & Login",
+                "Product Browsing & Search",
+                "Wishlist and Cart Functionality",
+                "User Profile Management",
+                "Admin Dashboard",
+                "Product & Order Management",
+                "Backend Offers Configuration"
+            ],
+            "challenges": "A key challenge in this project was managing dynamic delivery charges. The system needed to determine whether delivery was free based on specific conditions — such as user location and total cart weight. For areas with active delivery charges, it had to calculate fees based on the total weight of dry fruits in the cart. Additionally, only selected locations were configured for always-free delivery, requiring complex logic to accurately apply charges in real-time during checkout.",
+            "link": "https://jkdryfruits.in/",
+            "thumbnail": "assets/jk-dryfruits-thumbnail.webp"
+        },
+        {
             title: "Nova Education Group",
             description: "This project was developed to support an educational group in its transition from a state-affiliated curriculum to the CBSE framework. The system was built using PHP and is designed to streamline and academic processes in alignment with CBSE standards.",
             tags: ["PHP", "Jquery", "CAPTCHA", "HTML", "CSS"],
