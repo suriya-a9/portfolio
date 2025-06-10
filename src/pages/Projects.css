@@ -101,6 +101,7 @@ section.project-section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .no-scroll {
@@ -182,6 +183,9 @@ a.project-link {
 button.close-popup {
     background: #f46c38;
     opacity: 2;
+    position: absolute;
+    top: 5%;
+    right: 2%;
 }
 
 .popup-content p {
