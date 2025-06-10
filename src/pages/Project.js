@@ -28,7 +28,7 @@ const Projects = () => {
             ],
             "challenges": "A key challenge in this project was managing dynamic delivery charges. The system needed to determine whether delivery was free based on specific conditions — such as user location and total cart weight. For areas with active delivery charges, it had to calculate fees based on the total weight of dry fruits in the cart. Additionally, only selected locations were configured for always-free delivery, requiring complex logic to accurately apply charges in real-time during checkout.",
             "link": "https://jkdryfruits.in/",
-            "thumbnail": "assets/jk-dryfruits-thumbnail.webp"
+            "thumbnail": "assets/project-thumbnail.webp"
         },
         {
             title: "Nova Education Group",
