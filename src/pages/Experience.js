@@ -3,6 +3,8 @@ import { motion, useInView } from "framer-motion";
 import { TbBrandGithub } from "react-icons/tb";
 import { FiLinkedin } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
+import { PiDevToLogo } from "react-icons/pi";
+import { TfiReddit } from "react-icons/tfi";
 import { GoMail } from "react-icons/go";
 import "./Home.css";
 import "./Experience.css";
@@ -29,7 +31,9 @@ const Experience = () => {
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                                        <a href="mailto:youremail@example.com"><GoMail /></a>
+                                        <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
+                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +99,9 @@ const Experience = () => {
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                                        <a href="mailto:youremail@example.com"><GoMail /></a>
+                                        <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
+                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
                                     </div>
                                 </div>
                             </div>

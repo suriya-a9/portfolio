@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { TbBrandGithub } from "react-icons/tb";
+import { PiDevToLogo } from "react-icons/pi";
+import { TfiReddit } from "react-icons/tfi";
 import { FiLinkedin } from "react-icons/fi";
 import { TbCircleDot } from "react-icons/tb";
 import { GoMail } from "react-icons/go";
@@ -28,7 +30,9 @@ const Home = () => {
                   <div className="siderbar-icons">
                     <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                     <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                    <a href="mailto:youremail@example.com"><GoMail /></a>
+                    <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
+                    <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
                   </div>
                 </div>
               </div>
@@ -91,7 +95,9 @@ const Home = () => {
                   <div className="siderbar-icons">
                     <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                     <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                    <a href="mailto:youremail@example.com"><GoMail /></a>
+                    <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
+                    <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
                   </div>
                 </div>
               </div>

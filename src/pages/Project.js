@@ -3,6 +3,8 @@ import { motion, useInView } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
 import { TbBrandGithub } from "react-icons/tb";
 import { FiLinkedin } from "react-icons/fi";
+import { PiDevToLogo } from "react-icons/pi";
+import { TfiReddit } from "react-icons/tfi";
 import { TbCircleDot } from "react-icons/tb";
 import { GoMail } from "react-icons/go";
 import "./Projects.css";
@@ -161,7 +163,9 @@ const Projects = () => {
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                                        <a href="mailto:youremail@example.com"><GoMail /></a>
+                                        <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
+                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
                                     </div>
                                 </div>
                             </div>
@@ -218,7 +222,7 @@ const Projects = () => {
                     >
                         <motion.div
                             className="popup-content"
-                            onClick={(e) => e.stopPropagation()} // Prevent click propagation to overlay
+                            onClick={(e) => e.stopPropagation()}
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
@@ -277,7 +281,9 @@ const Projects = () => {
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                                        <a href="mailto:youremail@example.com"><GoMail /></a>
+                                        <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
+                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +336,7 @@ const Projects = () => {
                     >
                         <motion.div
                             className="popup-content"
-                            onClick={(e) => e.stopPropagation()} // Prevent click propagation to overlay
+                            onClick={(e) => e.stopPropagation()}
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
