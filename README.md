@@ -25,7 +25,7 @@ If you’d like to connect, feel free to reach out:
 
 ---
 
-## 📸 Screenshots  
+## 📸 See It in Motion 
 
 ![Homepage](public/assets/portfolio.gif) 
 
