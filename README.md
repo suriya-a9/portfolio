@@ -25,4 +25,10 @@ If you’d like to connect, feel free to reach out:
 
 ---
 
+## 📸 Screenshots  
+
+![Homepage](public/assets/portfolio.gif) 
+
+---
+
 ⭐ **Check out my portfolio and feel free to connect!**  
