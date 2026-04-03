@@ -36,7 +36,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-12">
+              <div className="col-sm-12 col-md-8">
                 <motion.div
                   ref={contentRef}
                   className="home-page-content"
