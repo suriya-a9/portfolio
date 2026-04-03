@@ -15,6 +15,21 @@ const Projects = () => {
     const [popup, setPopup] = useState({ visible: false, details: null });
     const projects = [
         {
+            "title": "Service Request System",
+            "description": "A service management platform that streamlines request handling between users, admins, and technicians. Built using the MERN stack, it enables users to raise service requests, allows admins to assign tasks, and lets technicians manage and complete requests. Developed backend APIs and an admin panel for efficient workflow management.",
+            "tags": ["MERN", "Node.js", "Express", "MongoDB", "React"],
+            "objectives": "Create a centralized system for managing service requests with clear role-based workflows, efficient task assignment, and real-time status tracking.",
+            "key": [
+                "User Service Request Handling",
+                "Admin Task Assignment",
+                "Technician Workflow Management",
+                "Role-Based Access Control",
+                "Real-Time Status Updates"
+            ],
+            "challenges": "Designing a smooth workflow between multiple roles, ensuring secure role-based access, and managing real-time updates and request state transitions across the system.",
+            "thumbnail": "assets/project-thumbnail.webp"
+        },
+        {
             "title": "UrTripo",
             "description": "UrTripo is a campaign-based aviation booking platform for helicopter and aircraft joy rides. Built with the MERN stack, it provides secure customer bookings, admin slot allocation, PNR generation, and automated email notifications. Backend: implemented all backend functionality (APIs, booking engine, slot allocation, PNR generation, email automation).",
             "tags": ["MERN", "Node.js", "Express", "MongoDB", "React", "Nodemailer"],
@@ -174,13 +189,13 @@ const Projects = () => {
                                 <div className="sidebar">
                                     <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                                     <h4>Suriya Prakash</h4>
-                                    <p>A Web Developer who has developed countless innovative solutions.</p>
+                                    <p>Building smart and effective web solutions.</p>
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                                         <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                                     </div>
                                 </div>
                             </div>
@@ -292,13 +307,13 @@ const Projects = () => {
                                 <div className="sidebar">
                                     <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                                     <h4>Suriya Prakash</h4>
-                                    <p>A Web Developer who has developed countless innovative solutions.</p>
+                                    <p>Building smart and effective web solutions.</p>
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                                         <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                                     </div>
                                 </div>
                             </div>

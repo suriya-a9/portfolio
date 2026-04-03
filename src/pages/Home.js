@@ -26,17 +26,17 @@ const Home = () => {
                 <div className="sidebar">
                   <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                   <h4>Suriya Prakash</h4>
-                  <p>A Web Developer who has developed countless innovative solutions.</p>
+                  <p>Building smart and effective web solutions.</p>
                   <div className="siderbar-icons">
                     <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                     <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                     <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                    <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                    {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                   </div>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-8">
+              <div className="col-sm-12 col-md-12">
                 <motion.div
                   ref={contentRef}
                   className="home-page-content"
@@ -44,11 +44,11 @@ const Home = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                  <h1>Web<br /><span>Developer</span></h1>
-                  <p>Passionate about building seamless web solutions from concept to deployment.<br />Skilled in designing dynamic frontends and robust backends, delivering high-<br />performance applications that solve real-world problems.</p>
+                  <h1>Full Stack<br /><span>Developer</span></h1>
+                  <p>I enjoy building web applications from the ground up—taking an idea and turning it into something real and usable. I like working on both the frontend and backend to create smooth, reliable experiences.</p>
                   <div className="home-page-experience">
-                    <h4>2+<span>Years of<br />Experience</span></h4>
-                    <h4>8+<span>Projects<br />Completed</span></h4>
+                    <h4>3+<span>Years of<br />Experience</span></h4>
+                    <h4>10+<span>Projects<br />Completed</span></h4>
                   </div>
                 </motion.div>
                 <motion.div
@@ -70,7 +70,7 @@ const Home = () => {
                 >
                   <h4 className="development-heading">My Journey</h4>
                   <p className="development-heading-p"><TbCircleDot /> My adventure in web development began with a curiosity to understand how the web works. Over the years, this curiosity transformed into a passion for building functional, visually appealing, and efficient web applications.</p>
-                  <p className="development-heading-p"><TbCircleDot /> I specialize in React.js, JavaScript (ES6+), PHP, and Laravel, but my toolkit also includes Node.js, MongoDB, and Drupal CMS. Whether it's developing a user-friendly frontend or designing a robust backend, I enjoy taking on challenges that push me to grow and learn.
+                  <p className="development-heading-p"><TbCircleDot /> I specialize in the MERN stack—MongoDB, Express.js, React, and Node.js. I enjoy building both user-friendly frontends and reliable backends, and I’m always eager to take on challenges that help me learn and grow.
                   </p>
                 </motion.div>
               </div>
@@ -91,13 +91,13 @@ const Home = () => {
                 <div className="sidebar">
                   <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                   <h4>Suriya Prakash</h4>
-                  <p>A Web Developer who has developed countless innovative solutions.</p>
+                  <p>Building smart and effective web solutions.</p>
                   <div className="siderbar-icons">
                     <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                     <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                     <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                    <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                    {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                   </div>
                 </div>
               </div>
@@ -105,11 +105,11 @@ const Home = () => {
                 <motion.div
                   className="home-page-content"
                 >
-                  <h1>Web<br /><span>Developer</span></h1>
-                  <p>Passionate about building seamless web solutions from concept to deployment.<br />Skilled in designing dynamic frontends and robust backends, delivering high-<br />performance applications that solve real-world problems.</p>
+                  <h1>Full Stack<br /><span>Developer</span></h1>
+                  <p>I enjoy building web applications from the ground up—taking an idea and turning it into something real and usable. I like working on both the frontend and backend to create smooth, reliable experiences.</p>
                   <div className="home-page-experience">
-                    <h4>2+<span>Years of<br />Experience</span></h4>
-                    <h4>8+<span>Projects<br />Completed</span></h4>
+                    <h4>3+<span>Years of<br />Experience</span></h4>
+                    <h4>10+<span>Projects<br />Completed</span></h4>
                   </div>
                 </motion.div>
                 <motion.div
@@ -127,7 +127,7 @@ const Home = () => {
                 >
                   <h4 className="development-heading">My Journey</h4>
                   <p className="development-heading-p"><TbCircleDot /> My adventure in web development began with a curiosity to understand how the web works. Over the years, this curiosity transformed into a passion for building functional, visually appealing, and efficient web applications.</p>
-                  <p className="development-heading-p"><TbCircleDot /> I specialize in React.js, JavaScript (ES6+), PHP, and Laravel, but my toolkit also includes Node.js, MongoDB, and Drupal CMS. Whether it's developing a user-friendly frontend or designing a robust backend, I enjoy taking on challenges that push me to grow and learn.
+                  <p className="development-heading-p"><TbCircleDot /> I specialize in the MERN stack—MongoDB, Express.js, React, and Node.js. I enjoy building both user-friendly frontends and reliable backends, and I’m always eager to take on challenges that help me learn and grow.
                   </p>
                 </motion.div>
               </div>

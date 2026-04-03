@@ -26,13 +26,13 @@ const Tools = () => {
                                 <div className="sidebar">
                                     <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                                     <h4>Suriya Prakash</h4>
-                                    <p>A Web Developer who has developed countless innovative solutions.</p>
+                                    <p>Building smart and effective web solutions.</p>
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                                         <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                                     </div>
                                 </div>
                             </div>
@@ -52,23 +52,25 @@ const Tools = () => {
                                             <img src={"assets/css-logo.webp"} alt="CSS3" />
                                             <img src={"assets/js-logo.webp"} alt="JavaScript" />
                                             <img src={"assets/node-js-logo.webp"} alt="Node.js" />
-                                            <img src={"assets/php.webp"} alt="PHP" />
+                                            {/* <img src={"assets/php.webp"} alt="PHP" /> */}
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Framework and Libraries</h4>
                                         <div className="tools-images">
                                             <img src={"assets/react-js-logo.webp"} alt="React.js" />
-                                            <img src={"assets/laravel.webp"} alt="Laravel" />
-                                            <img src={"assets/bootstrap.webp"} alt="Bootstrap" />
+                                            {/* <img src={"assets/laravel.webp"} alt="Laravel" /> */}
+                                            {/* <img src={"assets/bootstrap.webp"} alt="Bootstrap" /> */}
+                                            <img src={"assets/tailwindcss-logotype-white.svg"} alt="Tailwind" style={{ width: '200px', height: '100px' }} />
+                                            <img src={"assets/expressjs.png"} alt="Express Js" style={{ width: '150px', height: '80px', background: 'white' }} />
                                         </div>
                                     </div>
-                                    <div className="tools-list">
+                                    {/* <div className="tools-list">
                                         <h4>CMS</h4>
                                         <div className="tools-images">
                                             <img src={"assets/drupal-logo.webp"} alt="Drupal" />
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="tools-list">
                                         <h4>Databases</h4>
                                         <div className="tools-images">
@@ -92,12 +94,12 @@ const Tools = () => {
                                             <img src={"assets/composer-logo.webp"} alt="Composer" />
                                         </div>
                                     </div>
-                                    <div className="tools-list">
+                                    {/* <div className="tools-list">
                                         <h4>Currently Learning</h4>
                                         <div className="tools-images">
                                             <img src={"assets/tailwindcss-logotype-white.svg"} alt="Tailwind" style={{ width: '200px', height: '100px' }} />
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </motion.div>
                             </div>
                         </div>
@@ -117,13 +119,13 @@ const Tools = () => {
                                 <div className="sidebar">
                                     <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                                     <h4>Suriya Prakash</h4>
-                                    <p>A Web Developer who has developed countless innovative solutions.</p>
+                                    <p>Building smart and effective web solutions.</p>
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                                         <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                                     </div>
                                 </div>
                             </div>
@@ -139,23 +141,25 @@ const Tools = () => {
                                             <img src={"assets/css-logo.webp"} alt="CSS3" />
                                             <img src={"assets/js-logo.webp"} alt="JavaScript" />
                                             <img src={"assets/node-js-logo.webp"} alt="Node.js" />
-                                            <img src={"assets/php.webp"} alt="PHP" />
+                                            {/* <img src={"assets/php.webp"} alt="PHP" /> */}
                                         </div>
                                     </div>
                                     <div className="tools-list">
                                         <h4>Framework and Libraries</h4>
                                         <div className="tools-images">
                                             <img src={"assets/react-js-logo.webp"} alt="React.js" />
-                                            <img src={"assets/laravel.webp"} alt="Laravel" />
-                                            <img src={"assets/bootstrap.webp"} alt="Bootstrap" />
+                                            {/* <img src={"assets/laravel.webp"} alt="Laravel" /> */}
+                                            {/* <img src={"assets/bootstrap.webp"} alt="Bootstrap" /> */}
+                                            <img src={"assets/tailwindcss-logotype-white.svg"} alt="Tailwind" style={{ width: '200px', height: '100px' }} />
+                                            <img src={"assets/expressjs.png"} alt="Express Js" style={{ width: '150px', height: '80px', background: 'white' }} />
                                         </div>
                                     </div>
-                                    <div className="tools-list">
+                                    {/* <div className="tools-list">
                                         <h4>CMS</h4>
                                         <div className="tools-images">
                                             <img src={"assets/drupal-logo.webp"} alt="Drupal" />
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="tools-list">
                                         <h4>Databases</h4>
                                         <div className="tools-images">
@@ -179,12 +183,12 @@ const Tools = () => {
                                             <img src={"assets/composer-logo.webp"} alt="Composer" />
                                         </div>
                                     </div>
-                                    <div className="tools-list">
+                                    {/* <div className="tools-list">
                                         <h4>Currently Learning</h4>
                                         <div className="tools-images">
                                             <img src={"assets/tailwindcss-logotype-white.svg"} alt="Tailwind" style={{ width: '200px', height: '100px' }} />
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </motion.div>
                             </div>
                         </div>

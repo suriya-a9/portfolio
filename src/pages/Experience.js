@@ -27,13 +27,13 @@ const Experience = () => {
                                 <div className="sidebar">
                                     <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                                     <h4>Suriya Prakash</h4>
-                                    <p>A Web Developer who has developed countless innovative solutions.</p>
+                                    <p>Building smart and effective web solutions.</p>
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                                         <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                                     </div>
                                 </div>
                             </div>
@@ -47,6 +47,9 @@ const Experience = () => {
                                 >
                                     <h1>Experience &<br /><span>Education</span></h1>
                                     <h2 className="title-experience">Experience</h2>
+                                    <h4 className="experience-title"><img src={"assets/saras-logo.jpg"} alt="img" className="img-fluid" /> Saras Web Solutions <span>March 2025 - present</span></h4>
+                                    <p>Full-stack development of scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js). Designed and built RESTful APIs, handled database management, and developed efficient backend architectures to support high-performance applications.</p>
+                                    <p>Created dynamic and responsive user interfaces using React.js and modern JavaScript (ES6+), focusing on smooth user experiences. Implemented secure authentication and authorization (JWT), integrated third-party APIs, and optimized applications for performance and scalability while following clean code practices.</p>
                                     <h4 className="experience-title"><img src={"assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - March 2025</span></h4>
                                     <p>Full-stack development of scalable web applications using PHP (Laravel) and modern JavaScript frameworks (React.js). Designed and implemented robust backend architectures, including RESTful APIs and database management with MySQL and MongoDB. Developed dynamic, responsive front-end interfaces with React.js, JavaScript (ES6+), HTML5, and CSS3 (Sass), ensuring seamless user experiences. Leveraged Laravel's MVC architecture to handle complex business logic, middleware, and data validation.</p>
                                     <p>Built and customized web solutions using Drupal CMS platforms, integrating modules, themes, and plugins to meet client requirements. Followed best practices for code maintainability, including SOLID principles, PSR standards, and design patterns. Integrated third-party APIs, handled authentication/authorization (OAuth, JWT), and optimized performance for high-traffic applications.</p>
@@ -95,13 +98,13 @@ const Experience = () => {
                                 <div className="sidebar">
                                     <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                                     <h4>Suriya Prakash</h4>
-                                    <p>A Web Developer who has developed countless innovative solutions.</p>
+                                    <p>Building smart and effective web solutions.</p>
                                     <div className="siderbar-icons">
                                         <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                                         <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                                         <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                                     </div>
                                 </div>
                             </div>

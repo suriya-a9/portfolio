@@ -27,13 +27,13 @@ const About = () => {
                 <div className="sidebar">
                   <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                   <h4>Suriya Prakash</h4>
-                  <p>A Web Developer who has developed countless innovative solutions.</p>
+                  <p>Building smart and effective web solutions.</p>
                   <div className="siderbar-icons">
                     <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                     <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                     <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                    <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                    {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                   </div>
                 </div>
               </div>
@@ -47,13 +47,13 @@ const About = () => {
                 >
                   <h1>About<br /><span>Me</span></h1>
                   <div className="about-me">
-                    <p>Hi, I’m Suriya Prakash, a skilled web developer specializing in building responsive frontends with React.js and scalable backends using Laravel and Node.js. With a passion for creating impactful digital solutions, I bring ideas to life with clean and efficient code.</p>
+                    <p>Hi, I’m Suriya Prakash, a skilled web developer specializing in building responsive frontends with React.js and scalable backends using the MERN stack. Passionate about creating impactful digital solutions, I turn ideas into reality with clean and efficient code.</p>
                     <h4>Contact Me</h4>
                     <div className="contact">
                       <a href="tel:+916384820056"><FaPhoneAlt /> +91 63848 20056</a>
                       <a href="mailto:uriyaprakash@gmail.com"><IoMdMail /> uriyaprakash@gmail.com</a>
                     </div>
-                    📄 <a className="resume" target="_blank" href="assets/Suriya Prakash Resume.pdf">See My Resume <FiDownload /></a>
+                    📄 <a className="resume" target="_blank" href="assets/Suriya_Prakash_MERN_Stack_Resume.pdf">See My Resume <FiDownload /></a>
                   </div>
                 </motion.div>
               </div>
@@ -74,13 +74,13 @@ const About = () => {
                 <div className="sidebar">
                   <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
                   <h4>Suriya Prakash</h4>
-                  <p>A Web Developer who has developed countless innovative solutions.</p>
+                  <p>Building smart and effective web solutions.</p>
                   <div className="siderbar-icons">
                     <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
                     <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
                     <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                    <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a>
+                    {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
+                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
                   </div>
                 </div>
               </div>
@@ -90,13 +90,13 @@ const About = () => {
                 >
                   <h1>About<br /><span>Me</span></h1>
                   <div className="about-me">
-                    <p>Hi, I’m Suriya Prakash, a skilled web developer specializing in building responsive frontends with React.js and scalable backends using Laravel and Node.js. With a passion for creating impactful digital solutions, I bring ideas to life with clean and efficient code.</p>
+                    <p>Hi, I’m Suriya Prakash, skilled web developer specializing in building responsive frontends with React.js and scalable backends using the MERN stack. Passionate about creating impactful digital solutions, I turn ideas into reality with clean and efficient code.</p>
                     <h4>Contact Me</h4>
                     <div className="contact">
                       <a href="tel:+916384820056"><FaPhoneAlt /> +91 63848 20056</a>
                       <a href="mailto:uriyaprakash@gmail.com"><IoMdMail /> uriyaprakash@gmail.com</a>
                     </div>
-                    📄 <a className="resume" href="assets/resume.pdf" download="Suriya Prakash Resume.pdf">See My Resume <FiDownload /></a>
+                    📄 <a className="resume" href="assets/resume.pdf" download="Suriya_Prakash_MERN_Stack_Resume.pdf">See My Resume <FiDownload /></a>
                   </div>
                 </motion.div>
               </div>
