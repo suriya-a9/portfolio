@@ -42,13 +42,15 @@ const Experience = () => {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="page-heading">
-                        Experience &<br />
-                        <span>Education</span>
-                    </h1>
+                    <div className="section-header">
+                        <span className="subtitle">PORTFOLIO</span>
+                        <h2>
+                            Experience <span>Education</span>
+                        </h2>
+                    </div>
 
                     <section className="experience-block">
-                        <h2 className="section-title">Experience</h2>
+                        {/* <h2 className="section-title">Experience</h2> */}
 
                         <article className="experience-item">
                             <div className="experience-header">
@@ -86,7 +88,11 @@ const Experience = () => {
                     </section>
 
                     <section className="experience-block">
-                        <h2 className="section-title">Education</h2>
+                        <div className="section-header">
+                            <h2>
+                                Education
+                            </h2>
+                        </div>
 
                         <article className="education-card">
                             <img src="assets/tc-arts-logo.webp" alt="TC Arts" className="institution-logo" />
@@ -110,7 +116,11 @@ const Experience = () => {
                     </section>
 
                     <section className="experience-block">
-                        <h2 className="section-title">Certifications</h2>
+                        <div className="section-header">
+                            <h2>
+                                Certificate
+                            </h2>
+                        </div>
 
                         <article className="education-card">
                             <img src="assets/google-logo.webp" alt="Google" className="institution-logo" />

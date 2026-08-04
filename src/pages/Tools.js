@@ -42,13 +42,13 @@ const Tools = () => {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="page-heading">
-                        Tools &<br />
-                        <span>Platforms</span>
-                    </h1>
 
                     <div className="tools-category">
-                        <h2 className="category-title">Programming Languages</h2>
+                        <div className="section-header">
+                            <h2>
+                                Programming <span>Languages</span>
+                            </h2>
+                        </div>
                         <div className="tools-grid">
                             <div className="tool-card">
                                 <img src="assets/html-logo.webp" alt="HTML5" />
@@ -66,7 +66,11 @@ const Tools = () => {
                     </div>
 
                     <div className="tools-category">
-                        <h2 className="category-title">Frameworks & Libraries</h2>
+                        <div className="section-header">
+                            <h2>
+                                Frameworks & <span>Libraries</span>
+                            </h2>
+                        </div>
                         <div className="tools-grid">
                             <div className="tool-card">
                                 <img src="assets/react-js-logo.webp" alt="React.js" />
@@ -81,7 +85,12 @@ const Tools = () => {
                     </div>
 
                     <div className="tools-category">
-                        <h2 className="category-title">Databases</h2>
+                        {/* <h2 className="category-title"></h2> */}
+                        <div className="section-header">
+                            <h2>
+                                Databases
+                            </h2>
+                        </div>
                         <div className="tools-grid">
                             <div className="tool-card">
                                 <img src="assets/mysql.webp" alt="MySQL" />
@@ -96,7 +105,12 @@ const Tools = () => {
                     </div>
 
                     <div className="tools-category">
-                        <h2 className="category-title">Version Control</h2>
+                        {/* <h2 className="category-title">Version Control</h2> */}
+                        <div className="section-header">
+                            <h2>
+                                Version <span>Control</span>
+                            </h2>
+                        </div>
                         <div className="tools-grid">
                             <div className="tool-card">
                                 <img src="assets/git-logo.webp" alt="Git" />
@@ -108,7 +122,12 @@ const Tools = () => {
                     </div>
 
                     <div className="tools-category">
-                        <h2 className="category-title">Tools for Development</h2>
+                        {/* <h2 className="category-title">Tools for Development</h2> */}
+                        <div className="section-header">
+                            <h2>
+                                Tools for <span>Development</span>
+                            </h2>
+                        </div>
                         <div className="tools-grid">
                             <div className="tool-card">
                                 <img src="assets/vs-code-logo.webp" alt="VS Code" />

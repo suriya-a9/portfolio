@@ -166,12 +166,10 @@ const Projects = () => {
         <section className="project-section">
             <div className="container">
                 <div className="row g-4">
-                    {/* Sidebar Column */}
                     <div className="col-12 col-lg-4">
                         <Sidebar />
                     </div>
 
-                    {/* Content Column */}
                     <div className="col-12 col-lg-8">
                         <motion.div
                             ref={contentRef}
@@ -229,7 +227,6 @@ const Projects = () => {
                 </div>
             </div>
 
-            {/* Modal / Popup Details */}
             <AnimatePresence>
                 {popup.visible && popup.details && (
                     <motion.div

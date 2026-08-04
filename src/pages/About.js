@@ -44,10 +44,12 @@ const About = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="page-heading">
-            About<br />
-            <span>Me</span>
-          </h1>
+          <div className="section-header">
+            <span className="subtitle">PORTFOLIO</span>
+            <h2>
+              About <span>Me</span>
+            </h2>
+          </div>
 
           <div className="about-body">
             <p className="about-text">

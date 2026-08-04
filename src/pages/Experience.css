@@ -67,7 +67,6 @@
 .experience-content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
 }
 
 .page-heading {
@@ -188,6 +187,29 @@
 .cert-link:hover {
     color: #93c5fd;
     text-decoration: underline;
+}
+
+.section-header {
+    margin-bottom: 35px;
+}
+
+.section-header .subtitle {
+    color: #f46c38;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.section-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.section-header h2 span {
+    color: #f46c38;
 }
 
 @media (max-width: 868px) {
