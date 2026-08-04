@@ -1,141 +1,140 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { TbBrandGithub } from "react-icons/tb";
-import { PiDevToLogo } from "react-icons/pi";
-import { TfiReddit } from "react-icons/tfi";
+import { motion } from "framer-motion";
+import { TbBrandGithub, TbCircleDot } from "react-icons/tb";
 import { FiLinkedin } from "react-icons/fi";
-import { TbCircleDot } from "react-icons/tb";
 import { GoMail } from "react-icons/go";
 import "./Home.css";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const Home = () => {
-  const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { once: true });
   return (
-    <>
+    <div className="home-wrapper">
+      <div className="glow-bg glow-primary"></div>
+      <div className="glow-bg glow-secondary"></div>
+
       <section className="home-section">
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12 col-md-4">
-                <div className="sidebar">
-                  <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
-                  <h4>Suriya Prakash</h4>
-                  <p>Building smart and effective web solutions.</p>
-                  <div className="siderbar-icons">
-                    <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
-                    <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                    <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                    {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
+        <div className="container">
+          <div className="main-grid">
+
+            <motion.aside
+              className="sidebar-card glass-panel"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="status-badge">
+                <span className="pulse-dot"></span> Available for work
+              </div>
+
+              <div className="profile-img-container">
+                <img
+                  className="profile-img"
+                  src="assets/profile-image.png"
+                  alt="Suriya Prakash"
+                />
+              </div>
+
+              <h3 className="profile-name">Suriya Prakash</h3>
+              <p className="profile-bio">
+                Building smart, sleek, and high-performance web solutions.
+              </p>
+
+              <div className="sidebar-icons">
+                <a href="https://github.com/suriya-a9" target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <TbBrandGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <FiLinkedin />
+                </a>
+                <a href="mailto:uriyaprakash@gmail.com" aria-label="Email">
+                  <GoMail />
+                </a>
+              </div>
+            </motion.aside>
+
+            <motion.main
+              className="content-area"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.div className="glass-panel content-block hero-block" variants={itemVariants}>
+                <h1 className="hero-title">
+                  Full Stack <br />
+                  <span className="gradient-text">Developer</span>
+                </h1>
+                <p className="hero-desc">
+                  Full Stack Developer with 3.5+ years of experience building MERN/PERN applications, REST APIs, AI-powered SaaS products, and scalable web solutions.
+                </p>
+
+                <div className="stats-grid">
+                  <div className="stat-card">
+                    <span className="stat-number">3+</span>
+                    <span className="stat-label">Years of<br />Experience</span>
+                  </div>
+                  <div className="stat-card">
+                    <span className="stat-number">10+</span>
+                    <span className="stat-label">Projects<br />Completed</span>
                   </div>
                 </div>
-              </div>
-              <div className="col-sm-12 col-md-8">
-                <motion.div
-                  ref={contentRef}
-                  className="home-page-content"
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                  <h1>Full Stack<br /><span>Developer</span></h1>
-                  <p>I enjoy building web applications from the ground up—taking an idea and turning it into something real and usable. I like working on both the frontend and backend to create smooth, reliable experiences.</p>
-                  <div className="home-page-experience">
-                    <h4>3+<span>Years of<br />Experience</span></h4>
-                    <h4>10+<span>Projects<br />Completed</span></h4>
-                  </div>
-                </motion.div>
-                <motion.div
-                  ref={contentRef}
-                  className="home-page-content"
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                  <h4 className="development-heading">What I Bring to the Table</h4>
-                  <ul>
-                    <li><TbCircleDot /> Expertise in full-stack development, capable of managing projects end-to-end, from designing user interfaces to deploying applications.</li>
-                    <li><TbCircleDot /> A knack for solving complex problems with clean, maintainable code following industry best practices.</li>
-                    <li><TbCircleDot /> Collaboration and communication skills to work effectively with cross-functional teams, clients, and stakeholders.</li>
-                  </ul>
-                </motion.div>
-                <motion.div
-                  className="home-page-content"
-                >
-                  <h4 className="development-heading">My Journey</h4>
-                  <p className="development-heading-p"><TbCircleDot /> My adventure in web development began with a curiosity to understand how the web works. Over the years, this curiosity transformed into a passion for building functional, visually appealing, and efficient web applications.</p>
-                  <p className="development-heading-p"><TbCircleDot /> I specialize in the MERN stack—MongoDB, Express.js, React, and Node.js. I enjoy building both user-friendly frontends and reliable backends, and I’m always eager to take on challenges that help me learn and grow.
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </section >
-      <section className="home-section-mobile">
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12">
-                <div className="sidebar">
-                  <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
-                  <h4>Suriya Prakash</h4>
-                  <p>Building smart and effective web solutions.</p>
-                  <div className="siderbar-icons">
-                    <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
-                    <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                    <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                    {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
-                  </div>
+              </motion.div>
+
+              <motion.div className="glass-panel content-block" variants={itemVariants}>
+                <h4 className="section-title">What I Bring to the Table</h4>
+
+                <ul className="value-list">
+                  <li>
+                    <TbCircleDot className="list-icon" />
+                    <span><strong>Full Stack Development:</strong> Building responsive frontends, scalable APIs, and database-driven applications.</span>
+                  </li>
+
+                  <li>
+                    <TbCircleDot className="list-icon" />
+                    <span><strong>AI Integration:</strong> Experience integrating Claude AI, Voyage AI embeddings, and PGVector for AI-powered SaaS products.</span>
+                  </li>
+
+                  <li>
+                    <TbCircleDot className="list-icon" />
+                    <span><strong>Production Ready:</strong> Developing secure, maintainable applications with authentication, third-party integrations, and performance optimization.</span>
+                  </li>
+                </ul>
+              </motion.div>
+
+              <motion.div className="glass-panel content-block" variants={itemVariants}>
+                <h4 className="section-title">My Journey</h4>
+                <p className="journey-text">
+                  Over the past 3.5+ years, I've built eCommerce platforms, CMS solutions, AI-powered SaaS products, and business applications using modern JavaScript technologies. I enjoy solving backend challenges while delivering intuitive user experiences.
+                </p>
+
+                <div className="tech-stack-pills">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Express.js</span>
+                  <span>PostgreSQL</span>
+                  <span>MongoDB</span>
+                  <span>PHP</span>
+                  <span>Laravel</span>
+                  <span>Claude AI</span>
+                  <span>PGVector</span>
                 </div>
-              </div>
-              <div className="col-sm-12">
-                <motion.div
-                  className="home-page-content"
-                >
-                  <h1>Full Stack<br /><span>Developer</span></h1>
-                  <p>I enjoy building web applications from the ground up—taking an idea and turning it into something real and usable. I like working on both the frontend and backend to create smooth, reliable experiences.</p>
-                  <div className="home-page-experience">
-                    <h4>3+<span>Years of<br />Experience</span></h4>
-                    <h4>10+<span>Projects<br />Completed</span></h4>
-                  </div>
-                </motion.div>
-                <motion.div
-                  className="home-page-content"
-                >
-                  <h4 className="development-heading">What I Bring to the Table</h4>
-                  <ul>
-                    <li><TbCircleDot /> Expertise in full-stack development, capable of managing projects end-to-end, from designing user interfaces to deploying applications.</li>
-                    <li><TbCircleDot /> A knack for solving complex problems with clean, maintainable code following industry best practices.</li>
-                    <li><TbCircleDot /> Collaboration and communication skills to work effectively with cross-functional teams, clients, and stakeholders.</li>
-                  </ul>
-                </motion.div>
-                <motion.div
-                  className="home-page-content"
-                >
-                  <h4 className="development-heading">My Journey</h4>
-                  <p className="development-heading-p"><TbCircleDot /> My adventure in web development began with a curiosity to understand how the web works. Over the years, this curiosity transformed into a passion for building functional, visually appealing, and efficient web applications.</p>
-                  <p className="development-heading-p"><TbCircleDot /> I specialize in the MERN stack—MongoDB, Express.js, React, and Node.js. I enjoy building both user-friendly frontends and reliable backends, and I’m always eager to take on challenges that help me learn and grow.
-                  </p>
-                </motion.div>
-              </div>
-            </div>
+              </motion.div>
+
+            </motion.main>
           </div>
-        </motion.div>
-      </section >
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 

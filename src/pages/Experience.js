@@ -1,156 +1,139 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { TbBrandGithub } from "react-icons/tb";
 import { FiLinkedin } from "react-icons/fi";
-import { GoArrowUpRight } from "react-icons/go";
-import { PiDevToLogo } from "react-icons/pi";
-import { TfiReddit } from "react-icons/tfi";
-import { GoMail } from "react-icons/go";
+import { GoArrowUpRight, GoMail } from "react-icons/go";
 import "./Home.css";
 import "./Experience.css";
 
 const Experience = () => {
     const contentRef = useRef(null);
-    const isInView = useInView(contentRef, { once: true });
+    const isInView = useInView(contentRef, { once: true, margin: "-50px" });
+
     return (
-        <>
-            <section className="experience-section">
-                <motion.div
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-12 col-md-4">
-                                <div className="sidebar">
-                                    <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
-                                    <h4>Suriya Prakash</h4>
-                                    <p>Building smart and effective web solutions.</p>
-                                    <div className="siderbar-icons">
-                                        <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
-                                        <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                                        <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-12 col-md-8">
-                                <motion.div
-                                    ref={contentRef}
-                                    className="home-page-content"
-                                    initial={{ opacity: 0, y: -50 }}
-                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                    transition={{ duration: 0.8, ease: "easeOut" }}
-                                >
-                                    <h1>Experience &<br /><span>Education</span></h1>
-                                    <h2 className="title-experience">Experience</h2>
-                                    <h4 className="experience-title"><img src={"assets/saras-logo.jpg"} alt="img" className="img-fluid" /> Saras Web Solutions <span>March 2025 - present</span></h4>
-                                    <p>Full-stack development of scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js). Designed and built RESTful APIs, handled database management, and developed efficient backend architectures to support high-performance applications.</p>
-                                    <p>Created dynamic and responsive user interfaces using React.js and modern JavaScript (ES6+), focusing on smooth user experiences. Implemented secure authentication and authorization (JWT), integrated third-party APIs, and optimized applications for performance and scalability while following clean code practices.</p>
-                                    <h4 className="experience-title"><img src={"assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - March 2025</span></h4>
-                                    <p>Full-stack development of scalable web applications using PHP (Laravel) and modern JavaScript frameworks (React.js). Designed and implemented robust backend architectures, including RESTful APIs and database management with MySQL and MongoDB. Developed dynamic, responsive front-end interfaces with React.js, JavaScript (ES6+), HTML5, and CSS3 (Sass), ensuring seamless user experiences. Leveraged Laravel's MVC architecture to handle complex business logic, middleware, and data validation.</p>
-                                    <p>Built and customized web solutions using Drupal CMS platforms, integrating modules, themes, and plugins to meet client requirements. Followed best practices for code maintainability, including SOLID principles, PSR standards, and design patterns. Integrated third-party APIs, handled authentication/authorization (OAuth, JWT), and optimized performance for high-traffic applications.</p>
-
-                                    <h2 className="title-experience">Education</h2>
-                                    <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"assets/tc-arts-logo.webp"} alt="img" className="img-fluid" />
-                                        <div className="education-div-content">
-                                            <h4 className="experience-title"> TC Arts <span>June 2017 - April 2020</span></h4>
-                                            <p>Bachelor of Computer Application</p>
-                                        </div>
-                                    </div>
-                                    <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"assets/tmhss-logo.webp"} alt="img" className="img-fluid" />
-                                        <div className="education-div-content">
-                                            <h4 className="experience-title"> TMHSS <span>June 2015- April 2017</span></h4>
-                                            <p>Higher Secondary</p>
-                                        </div>
-                                    </div>
-
-                                    <h2 className="title-experience">Certifications</h2>
-                                    <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"assets/google-logo.webp"} alt="img" className="img-fluid" />
-                                        <div className="education-div-content">
-                                            <h4 className="experience-title"> Google <span>Dec 2021 - Feb 2022</span></h4>
-                                            <p style={{ marginBottom: '0px' }}>Google Data Analytics</p>
-                                            <a href="https://coursera.org/share/fe32e04beb632fdd61bf33086214af82" target="_blank">See my Certificate <GoArrowUpRight /></a>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            </div>
-                        </div>
+        <section className="experience-section">
+            <motion.div
+                className="experience-layout"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+                <aside className="experience-sidebar">
+                    <img className="sidebar-avatar" src="assets/profile-image.png" alt="Suriya Prakash" />
+                    <h4 className="sidebar-name">Suriya Prakash</h4>
+                    <p className="sidebar-bio">Building smart and effective web solutions.</p>
+                    <div className="sidebar-icons">
+                        <a href="https://github.com/suriya-a9" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <TbBrandGithub />
+                        </a>
+                        <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <FiLinkedin />
+                        </a>
+                        <a href="mailto:uriyaprakash@gmail.com" aria-label="Email">
+                            <GoMail />
+                        </a>
                     </div>
-                </motion.div >
-            </section >
-            <section className="experience-section-mobile">
-                <motion.div
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.5 }}
+                </aside>
+
+                <motion.main
+                    ref={contentRef}
+                    className="experience-content"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-12">
-                                <div className="sidebar">
-                                    <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
-                                    <h4>Suriya Prakash</h4>
-                                    <p>Building smart and effective web solutions.</p>
-                                    <div className="siderbar-icons">
-                                        <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
-                                        <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                                        <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
-                                    </div>
-                                </div>
+                    <h1 className="page-heading">
+                        Experience &<br />
+                        <span>Education</span>
+                    </h1>
+
+                    <section className="experience-block">
+                        <h2 className="section-title">Experience</h2>
+
+                        <article className="experience-item">
+                            <div className="experience-header">
+                                <img src="assets/saras-logo.jpg" alt="Saras Web Solutions" className="company-logo" />
+                                <h4 className="company-title">
+                                    Saras Web Solutions <span className="duration-tag">March 2025 - Present</span>
+                                </h4>
                             </div>
-                            <div className="col-sm-12">
-                                <motion.div
-                                    className="home-page-content"
+
+                            <p className="description-text">
+                                Working as a Full Stack Developer using the MERN/PERN stack to build scalable web applications, RESTful APIs, and responsive React.js interfaces with secure authentication using JWT and bcrypt.
+                            </p>
+
+                            <p className="description-text">
+                                Developed AI-powered SaaS features by integrating Claude AI, Voyage AI embeddings, and PGVector, while collaborating with the team to deliver production-ready features, bug fixes, and performance improvements.
+                            </p>
+                        </article>
+
+                        <article className="experience-item">
+                            <div className="experience-header">
+                                <img src="assets/embark.webp" alt="Embark Interactive" className="company-logo" />
+                                <h4 className="company-title">
+                                    Embark Interactive <span className="duration-tag">June 2022 - March 2025</span>
+                                </h4>
+                            </div>
+
+                            <p className="description-text">
+                                Developed scalable web applications using React.js, Node.js, PHP (Laravel), MySQL, MongoDB, and Drupal CMS. Built RESTful APIs, responsive user interfaces, and backend systems for eCommerce, CMS, SaaS, and business applications.
+                            </p>
+
+                            <p className="description-text">
+                                Integrated third-party APIs, implemented secure authentication (JWT/OAuth), optimized application performance, and collaborated across the full software development lifecycle to deliver production-ready solutions.
+                            </p>
+                        </article>
+                    </section>
+
+                    <section className="experience-block">
+                        <h2 className="section-title">Education</h2>
+
+                        <article className="education-card">
+                            <img src="assets/tc-arts-logo.webp" alt="TC Arts" className="institution-logo" />
+                            <div className="education-details">
+                                <h4 className="institution-title">
+                                    TC Arts <span className="duration-tag">June 2017 - April 2020</span>
+                                </h4>
+                                <p className="degree-title">Bachelor of Computer Application</p>
+                            </div>
+                        </article>
+
+                        <article className="education-card">
+                            <img src="assets/tmhss-logo.webp" alt="TMHSS" className="institution-logo" />
+                            <div className="education-details">
+                                <h4 className="institution-title">
+                                    TMHSS <span className="duration-tag">June 2015 - April 2017</span>
+                                </h4>
+                                <p className="degree-title">Higher Secondary</p>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section className="experience-block">
+                        <h2 className="section-title">Certifications</h2>
+
+                        <article className="education-card">
+                            <img src="assets/google-logo.webp" alt="Google" className="institution-logo" />
+                            <div className="education-details">
+                                <h4 className="institution-title">
+                                    Google <span className="duration-tag">Dec 2021 - Feb 2022</span>
+                                </h4>
+                                <p className="degree-title">Google Data Analytics</p>
+                                <a
+                                    href="https://coursera.org/share/fe32e04beb632fdd61bf33086214af82"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="cert-link"
                                 >
-                                    <h1>Experience &<br /><span>Education</span></h1>
-                                    <h2 className="title-experience">Experience</h2>
-                                    <h4 className="experience-title"><img src={"assets/embark.webp"} alt="img" className="img-fluid" /> Embark Interractive <span>June 2022 - Present</span></h4>
-                                    <p>Full-stack development of scalable web applications using PHP (Laravel) and modern JavaScript frameworks (React.js). Designed and implemented robust backend architectures, including RESTful APIs and database management with MySQL and MongoDB. Developed dynamic, responsive front-end interfaces with React.js, JavaScript (ES6+), HTML5, and CSS3 (Sass), ensuring seamless user experiences. Leveraged Laravel's MVC architecture to handle complex business logic, middleware, and data validation.</p>
-                                    <p>Built and customized web solutions using Drupal CMS platforms, integrating modules, themes, and plugins to meet client requirements. Followed best practices for code maintainability, including SOLID principles, PSR standards, and design patterns. Integrated third-party APIs, handled authentication/authorization (OAuth, JWT), and optimized performance for high-traffic applications.</p>
-
-                                    <h2 className="title-experience">Education</h2>
-                                    <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"assets/tc-arts-logo.webp"} alt="img" className="img-fluid" />
-                                        <div className="education-div-content">
-                                            <h4 className="experience-title"> TC Arts <span>June 2017 - April 2020</span></h4>
-                                            <p>Bachelor of Computer Application</p>
-                                        </div>
-                                    </div>
-                                    <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"assets/tmhss-logo.webp"} alt="img" className="img-fluid" />
-                                        <div className="education-div-content">
-                                            <h4 className="experience-title"> TMHSS <span>June 2015- April 2017</span></h4>
-                                            <p>Higher Secondary</p>
-                                        </div>
-                                    </div>
-
-                                    <h2 className="title-experience">Certifications</h2>
-                                    <div className="education-div" style={{ display: 'flex' }}>
-                                        <img src={"assets/google-logo.webp"} alt="img" className="img-fluid" />
-                                        <div className="education-div-content">
-                                            <h4 className="experience-title"> Google <span>Dec 2021 - Feb 2022</span></h4>
-                                            <p style={{ marginBottom: '0px' }}>Google Data Analytics</p>
-                                            <a href="https://coursera.org/share/fe32e04beb632fdd61bf33086214af82" target="_blank">See my Certificate <GoArrowUpRight /></a>
-                                        </div>
-                                    </div>
-                                </motion.div>
+                                    See my Certificate <GoArrowUpRight />
+                                </a>
                             </div>
-                        </div>
-                    </div>
-                </motion.div >
-            </section >
-        </>
-    )
-}
+                        </article>
+                    </section>
+                </motion.main>
+            </motion.div>
+        </section>
+    );
+};
 
 export default Experience;

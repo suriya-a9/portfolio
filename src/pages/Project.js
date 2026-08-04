@@ -1,168 +1,156 @@
 import React, { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
-import { GoArrowUpRight } from "react-icons/go";
-import { TbBrandGithub } from "react-icons/tb";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { GoArrowUpRight, GoMail } from "react-icons/go";
+import { TbBrandGithub, TbCircleDot } from "react-icons/tb";
 import { FiLinkedin } from "react-icons/fi";
-import { PiDevToLogo } from "react-icons/pi";
-import { TfiReddit } from "react-icons/tfi";
-import { TbCircleDot } from "react-icons/tb";
-import { GoMail } from "react-icons/go";
 import "./Projects.css";
+
+const PROJECTS_DATA = [
+    {
+        title: "AI Chatbot SaaS Platform",
+        description:
+            "A multi-tenant SaaS platform enabling businesses to register, create, and manage AI-powered chatbots. Built the complete application independently using the PERN stack, incorporating Claude AI, Voyage AI embeddings, and PGVector for semantic search.",
+        tags: [
+            "PERN",
+            "PostgreSQL",
+            "Node.js",
+            "Express",
+            "React",
+            "Claude AI",
+            "Voyage AI",
+            "PGVector",
+        ],
+        objectives:
+            "Develop a scalable SaaS platform allowing users to create and manage custom AI chatbots with secure authentication, knowledge base management, semantic search, and role-based administration.",
+        key: [
+            "Multi-Tenant SaaS Architecture",
+            "AI Chatbot Creation & Management",
+            "Admin & Client Dashboards",
+            "Knowledge Base & Document Processing",
+            "Claude AI Integration",
+            "Voyage AI Embeddings",
+            "PGVector Semantic Search",
+            "JWT Authentication & Role-Based Access Control",
+            "RESTful API Development",
+        ],
+        challenges:
+            "Designing a scalable multi-tenant architecture, integrating LLMs with vector embeddings, implementing efficient semantic search using PGVector, managing role-based access, and ensuring smooth service communication.",
+        thumbnail: "assets/project-thumbnail.webp",
+    },
+    {
+        title: "Service Request System",
+        description:
+            "A service management platform that streamlines request handling between users, admins, and technicians. Built using the MERN stack to raise service requests, assign tasks, and manage status workflows.",
+        tags: ["MERN", "Node.js", "Express", "MongoDB", "React"],
+        objectives:
+            "Create a centralized system for managing service requests with clear role-based workflows, efficient task assignment, and real-time status tracking.",
+        key: [
+            "User Service Request Handling",
+            "Admin Task Assignment",
+            "Technician Workflow Management",
+            "Role-Based Access Control",
+            "Real-Time Status Updates",
+        ],
+        challenges:
+            "Designing a smooth workflow across multiple user roles, ensuring secure access control, and managing real-time state transitions throughout the system.",
+        thumbnail: "assets/project-thumbnail.webp",
+    },
+    {
+        title: "JK Dry Fruits",
+        description:
+            "An eCommerce platform for premium dry fruits and nuts built using Next.js, React.js, Node.js, and MongoDB Atlas, providing customers with a seamless shopping experience and administrators with efficient product and order management.",
+        tags: ["Next.js", "React.js", "MongoDB Atlas", "Tailwind CSS", "Node.js"],
+        objectives:
+            "Develop a scalable eCommerce platform with secure authentication, product management, shopping features, and an intuitive admin dashboard.",
+        key: [
+            "Customer Registration & Login",
+            "Product Browsing & Search",
+            "Wishlist & Cart Management",
+            "Admin Dashboard",
+            "Product & Order Management",
+            "Offer Management",
+        ],
+        challenges:
+            "Implementing dynamic delivery charge calculations based on user location and cart weight while ensuring accurate pricing and a smooth checkout experience.",
+        thumbnail: "assets/project-thumbnail.webp",
+    },
+    {
+        title: "Magic Alumni",
+        description:
+            "A cross-platform alumni networking application built with Flutter and Node.js, enabling students and alumni to connect, share opportunities, and stay updated through a centralized platform.",
+        tags: ["Flutter", "Node.js", "Express", "MongoDB"],
+        objectives:
+            "Create a collaborative platform that strengthens alumni engagement through job postings, events, news, and secure role-based access.",
+        key: [
+            "Alumni & Student Registration",
+            "Job Posting System",
+            "News & Events",
+            "Role-Based Authentication",
+            "Community Engagement",
+        ],
+        challenges:
+            "Implementing secure multi-role authentication, integrating backend services with the mobile application, and delivering a seamless user experience across diverse features.",
+        thumbnail: "assets/project-thumbnail.webp",
+    },
+    {
+        title: "House of Paneer",
+        description:
+            "A restaurant website built with React.js that showcases menu offerings, enables table reservations, and delivers a modern browsing experience for customers.",
+        tags: ["React", "Framer Motion", "EmailJS", "React-Bootstrap"],
+        objectives:
+            "Build a responsive restaurant website with menu management, reservation capabilities, and an engaging customer experience.",
+        key: [
+            "Restaurant Menu",
+            "Table Booking System",
+            "Responsive Design",
+            "Email Integration",
+            "Interactive User Experience",
+        ],
+        challenges:
+            "Organizing extensive menu content, integrating a reliable reservation workflow, and maintaining smooth navigation across all sections of the website.",
+        thumbnail: "assets/project-thumbnail.webp",
+    },
+];
+
+const Sidebar = () => (
+    <div className="sidebar-card">
+        <div className="profile-img-wrapper">
+            <img
+                className="profile-img"
+                src="assets/profile-image.png"
+                alt="Suriya Prakash Profile"
+            />
+        </div>
+        <h3 className="profile-name">Suriya Prakash</h3>
+        <p className="profile-tagline">Building smart and effective web solutions.</p>
+        <div className="social-links">
+            <a
+                href="https://github.com/suriya-a9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+            >
+                <TbBrandGithub />
+            </a>
+            <a
+                href="https://www.linkedin.com/in/suriya-prakash-30885818a"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+            >
+                <FiLinkedin />
+            </a>
+            <a href="mailto:uriyaprakash@gmail.com" aria-label="Email">
+                <GoMail />
+            </a>
+        </div>
+    </div>
+);
 
 const Projects = () => {
     const contentRef = useRef(null);
     const isInView = useInView(contentRef, { once: true });
     const [popup, setPopup] = useState({ visible: false, details: null });
-    const projects = [
-        {
-            "title": "Service Request System",
-            "description": "A service management platform that streamlines request handling between users, admins, and technicians. Built using the MERN stack, it enables users to raise service requests, allows admins to assign tasks, and lets technicians manage and complete requests. Developed backend APIs and an admin panel for efficient workflow management.",
-            "tags": ["MERN", "Node.js", "Express", "MongoDB", "React"],
-            "objectives": "Create a centralized system for managing service requests with clear role-based workflows, efficient task assignment, and real-time status tracking.",
-            "key": [
-                "User Service Request Handling",
-                "Admin Task Assignment",
-                "Technician Workflow Management",
-                "Role-Based Access Control",
-                "Real-Time Status Updates"
-            ],
-            "challenges": "Designing a smooth workflow between multiple roles, ensuring secure role-based access, and managing real-time updates and request state transitions across the system.",
-            "thumbnail": "assets/project-thumbnail.webp"
-        },
-        {
-            "title": "UrTripo",
-            "description": "UrTripo is a campaign-based aviation booking platform for helicopter and aircraft joy rides. Built with the MERN stack, it provides secure customer bookings, admin slot allocation, PNR generation, and automated email notifications. Backend: implemented all backend functionality (APIs, booking engine, slot allocation, PNR generation, email automation).",
-            "tags": ["MERN", "Node.js", "Express", "MongoDB", "React", "Nodemailer"],
-            "objectives": "Develop a campaign-driven booking system for short scenic flights with reliable slot management, secure booking flow, automated PNR creation, and notification workflows.",
-            "key": [
-                "Secure Customer Bookings",
-                "Admin Slot Allocation",
-                "PNR Generation",
-                "Automated Email Notifications",
-                "Campaign Management"
-            ],
-            "challenges": "Coordinating real-time slot allocation during campaign spikes, ensuring unique and reliable PNR generation, and building robust backend workflows to handle concurrent bookings and email delivery.",
-            "thumbnail": "assets/project-thumbnail.webp"
-        },
-        {
-            "title": "JK Dry Fruits",
-            "description": "JK Dry Fruits is a modern eCommerce platform designed to deliver premium quality dry fruits and nuts directly to consumers. Built using Next.js and React.js, and powered by MongoDB Atlas, this project ensures a seamless and secure shopping experience with robust features for both customers and administrators.",
-            "tags": ["Next.js", "React.js", "MongoDB Atlas", "Tailwind CSS", "Node.js"],
-            "objectives": "The primary objective of this project was to develop a scalable and user-friendly eCommerce platform that allows customers to browse, wishlist, and purchase dry fruits with ease. The platform also enables secure user authentication, profile management, and order tracking. For administrators, the system offers a feature-rich dashboard to manage products, pages, offers, and customer orders — all through a streamlined backend interface.",
-            "key": [
-                "Customer Registration & Login",
-                "Product Browsing & Search",
-                "Wishlist and Cart Functionality",
-                "User Profile Management",
-                "Admin Dashboard",
-                "Product & Order Management",
-                "Backend Offers Configuration"
-            ],
-            "challenges": "A key challenge in this project was managing dynamic delivery charges. The system needed to determine whether delivery was free based on specific conditions — such as user location and total cart weight. For areas with active delivery charges, it had to calculate fees based on the total weight of dry fruits in the cart. Additionally, only selected locations were configured for always-free delivery, requiring complex logic to accurately apply charges in real-time during checkout.",
-            "link": "https://jkdryfruits.in/",
-            "thumbnail": "assets/project-thumbnail.webp"
-        },
-        {
-            title: "Nova Education Group",
-            description: "This project was developed to support an educational group in its transition from a state-affiliated curriculum to the CBSE framework. The system was built using PHP and is designed to streamline and academic processes in alignment with CBSE standards.",
-            tags: ["PHP", "Jquery", "CAPTCHA", "HTML", "CSS"],
-            objectives: "The objective of this project is to develop a PHP-based system to assist an educational group in transitioning smoothly to the CBSE curriculum. It aims to streamline academic and administrative operations by automating processes such as student data management, syllabus planning. The system ensures compliance with CBSE standards while enhancing efficiency and transparency. It also provides information about teachers, students, and other staffs to foster better communication and engagement.",
-            key: ["Student Information System", "Curriculum Mapping", "Staff Details", "Faclities Details", "Gallery", "CBSE Student Details", "Certificates"],
-            challenges: "The main challenge was aligning the existing academic structure with CBSE guidelines while ensuring data integrity during migration. Additionally, building a user-friendly interface for diverse required careful planning and testing.",
-            link: "https://novaedugroup.com/",
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "Magic Alumni",
-            description: "A cross-platform mobile application built with Flutter for the frontend and Node.js as the backend, offering real-time functionality and seamless API integration.",
-            tags: ["Node", "React", "Express JS", "MongoDB"],
-            objectives: "To develop a comprehensive mobile application that serves as a platform for alumni and students of a college to register, connect, and interact with each other. The app aims to foster a strong alumni network, enhance student-alumni engagement, and provide access to the latest news, events, and job postings shared by the college. By facilitating communication and collaboration, the application will create opportunities for mentorship, career growth, and active participation in the college community.",
-            key: ["Jobs Posting", "Alumni - Student engagement", "Role based authentications"],
-            challenges: "The primary challenges faced during the project were implementing secure role-based authentication for students, alumni, and administrators, seamlessly integrating the Admin UI Kit to align with the app’s functionality and design, and creating an intuitive user experience to encourage active engagement across features like news, events, and job postings.",
-            // link: "https://github.com/suriya-a9/magic-alumni",
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "Grace Associates",
-            description: "A unified platform built with React that seamlessly integrates three distinct services, providing a cohesive and user-friendly experience.",
-            objectives: "To develop a comprehensive website for a company offering three distinct services: paper bag creation, cleaning services, and legal services. The website will provide detailed information about each service, enable customers to request quotes or schedule services, and facilitate easy contact with the company. The goal is to create an accessible, user-friendly platform that showcases the company's expertise, fosters customer engagement, and drives business growth across all service areas.",
-            key: ["Services listing", "Mail Integration", "Integrating Chat-Bot"],
-            challenges: "The challenges in the project included managing distinct service offerings on a single platform, ensuring seamless user experience across different service categories, and integrating efficient booking and inquiry systems for each service.",
-            link: "https://graceassociate.com/",
-            tags: ["React", "Google Maps", "Tidio", "React-Bootstrap"],
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "House of Paneer",
-            description: "A dynamic and interactive restaurant website built with React.js, offering a seamless experience for browsing menus, placing orders, and making reservations.",
-            objectives: "To develop a user-friendly website for a paneer restaurant that showcases the restaurant’s menu, highlights its signature products, and integrates a seamless table booking system, providing customers with easy access to browse offerings and make reservations online.",
-            key: ["Table Booking System", "Restaurant Menu Integrations", "Seamless user-experience"],
-            challenges: "The challenges included organizing and displaying a diverse menu of products effectively, integrating a reliable and user-friendly table booking system, and ensuring smooth navigation across different sections of the site for a seamless customer experience.",
-            // link: "https://www.houseofpaneer.com/",
-            tags: ["React", "Framer-motion", "Email JS", "React-Bootstrap"],
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "Q&Q",
-            description: "A salon website showcasing services with an integrated booking system for seamless appointment scheduling.",
-            objectives: "To create an intuitive and visually appealing website for a salon that showcases its services and integrates a streamlined booking system, allowing customers to explore offerings and book appointments effortlessly.",
-            key: ["Booking System", "Services Displaying", "Seamless user-experience"],
-            challenges: "The challenges included effectively presenting a diverse range of salon services, integrating a user-friendly and reliable booking system, and ensuring a responsive design for seamless access across devices.",
-            link: "https://suriya-a9.github.io/Q-Q/",
-            tags: ["React", "Framer-motion", "Email JS", "React-Bootstrap"],
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "Madurai Market",
-            description: "A subscription-based web app enabling seamless product delivery with flexible schedules and personalized options, built for convenience and efficiency.",
-            objectives: "The project aims to develop a robust e-commerce website that showcases subscription-based products and incorporates a seamless cart system. Customers can subscribe to products with flexible delivery options, such as daily or weekday-based schedules, to suit their needs. The site ensures a user-friendly interface for managing subscriptions and tracking deliveries. Additionally, a quick-order feature is implemented to enable repeat customers to place orders effortlessly, enhancing the overall shopping experience.",
-            key: ["Subscription based system", "Locating user location using Google Map API", "Admin UI Panel", "Role based authentication", "APIs for mobile app using Flutter"],
-            challenges: "The challenges included implementing a dynamic subscription system with flexible delivery schedules, designing a cart system to handle recurring orders seamlessly, integrating the quick-order feature for efficient repeat purchases, and ensuring a smooth user experience across all functionalities while managing backend complexity for subscription tracking and delivery management.",
-            // link: "https://www.maduraimarket.in/",
-            tags: ["PHP", "Laravel", "API", "Admin Panel"],
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "E-Learningapp",
-            description: "A comprehensive learning app designed to connect students and teachers, offering interactive lessons, and resources.",
-            objectives: "The project aims to develop a feature-rich e-learning application with role-based authentication for students, teachers, and administrators. Teachers can create and manage courses, providing educational content tailored to students' needs, while students can browse, enroll in, and complete courses seamlessly. The app includes an admin panel for administrators to oversee user activity, manage courses, and ensure platform efficiency. This solution fosters a collaborative and organized learning environment with robust access control and intuitive functionality.",
-            key: ["API to interact with flutter app", "Admin UI Panel", "Role based authentication", "Zoom API for meeting"],
-            challenges: "The challenges included implementing secure and scalable role-based authentication for students, teachers, and administrators, designing an intuitive course creation and management system for teachers, ensuring a seamless and engaging course enrollment experience for students, and building a comprehensive admin panel to efficiently oversee platform activities and maintain data integrity.",
-            // link: "https://www.maduraimarket.in/",
-            tags: ["PHP", "Laravel", "API", "Admin Panel"],
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "Amstermed",
-            description: "A specialized CMS website designed to showcase and manage services for Medical Devices and In Vitro Diagnostic Devices efficiently and professionally.",
-            objectives: "The project aims to develop a comprehensive CMS website tailored to showcase and manage services related to Medical Devices and In Vitro Diagnostic Devices. The website will provide detailed information about products, services, and compliance requirements in a professional and user-friendly manner. It will include features to update content effortlessly, ensuring accurate and timely information for users. This solution is designed to enhance user engagement, build trust, and establish the company's expertise in the medical device industry.",
-            key: ["Creating custom theme", "Integrating Google Map API", "Meta Titles and keywords for better SEO results"],
-            challenges: "The challenges included designing a professional and compliant interface to effectively showcase medical and diagnostic device services, implementing a robust CMS for seamless content updates, ensuring compliance with industry regulations for accurate information display, and maintaining an intuitive user experience while managing complex technical and regulatory details.",
-            // link: "https://amstermed.nl/",
-            tags: ["Drupal", "Google API", "Webform", "Custom Theme"],
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "Workiy",
-            description: "A CMS website showcasing a company's services and cutting-edge technologies with an intuitive and professional design.",
-            objectives: "The project aims to create a CMS website that effectively showcases a company's services and cutting-edge technologies through an intuitive and professional design. The website will highlight the company’s expertise, innovations, and offerings while ensuring easy navigation and engagement for users. With a robust content management system, the site will allow for seamless updates and accurate information delivery. This solution is designed to strengthen the company’s online presence and establish it as a leader in its industry.",
-            key: ["Custom Theme Creation", "Effortles user navigation", "Hierarchical architecture for services"],
-            challenges: "The challenges included designing a visually appealing yet professional interface to highlight the company's services and technologies, ensuring the CMS is user-friendly for easy content updates, maintaining the balance between cutting-edge design and functionality, and optimizing the website for performance and SEO while keeping it scalable for future expansions.",
-            // link: "https://workiy.com/",
-            tags: ["Drupal", "Google API", "Webform", "Custom Theme", "Custom Module"],
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-        {
-            title: "Techdemy",
-            description: "A dedicated website for showcasing courses and detailed syllabuses, providing learners with comprehensive curriculum insights.",
-            objectives: "The project aims to develop a dedicated website that showcases a variety of courses along with their detailed syllabuses, providing learners with comprehensive insights into the curriculum. The platform will allow users to explore course offerings, understand course structures, and gain a clear understanding of what to expect from each program. With an intuitive design, the website will ensure easy navigation for prospective students. The goal is to empower learners with the knowledge they need to make informed decisions about their educational journey.",
-            key: ["Custom Theme Creation", "Webform for each course with mail integration", "Hierarchical architecture for courses", "Webinar for a site"],
-            challenges: "The challenges included organizing and presenting detailed course syllabuses in a user-friendly way, ensuring the website can handle extensive course data while maintaining performance, creating a seamless user experience for learners to explore and compare courses, and ensuring that the site is easily updatable to reflect changes in course offerings and curricula.",
-            // link: "https://techdemy.in/",
-            tags: ["Drupal", "Bootstrap", "Webform", "Custom Theme"],
-            thumbnail: "assets/project-thumbnail.webp",
-        },
-    ];
 
     const handlePopup = (project) => {
         setPopup({ visible: true, details: project });
@@ -175,242 +163,142 @@ const Projects = () => {
     };
 
     return (
-        <>
-            <section className="project-section">
-                <motion.div
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-12 col-md-4">
-                                <div className="sidebar">
-                                    <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
-                                    <h4>Suriya Prakash</h4>
-                                    <p>Building smart and effective web solutions.</p>
-                                    <div className="siderbar-icons">
-                                        <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
-                                        <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                                        <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-12 col-md-8">
-                                <motion.div
-                                    ref={contentRef}
-                                    className="home-page-content"
-                                    initial={{ opacity: 0, y: -50 }}
-                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                    transition={{ duration: 0.8, ease: "easeOut" }}
-                                >
-                                    <h1>Recent<br /><span>Projects</span></h1>
-                                    <div className="projects-lists">
-                                        {projects.map((project, index) => (
-                                            <div
-                                                className="projects"
-                                                key={index}
-                                                onClick={() => handlePopup(project)}
-                                            >
-                                                <div className="row">
-                                                    <div className="col-md-3">
-                                                        <div className="project-thumbnail">
-                                                            <img className="img-fluid" src={project.thumbnail} alt="thumbnail" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-9">
-                                                        <div className="project-details">
-                                                            <h4>{project.title} <GoArrowUpRight /></h4>
-                                                            <p>{project.description}</p>
-                                                            <div className="project-tags">
-                                                                {project.tags.map((tag, i) => (
-                                                                    <button key={i}>{tag}</button>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            </div>
-                        </div>
+        <section className="project-section">
+            <div className="container">
+                <div className="row g-4">
+                    {/* Sidebar Column */}
+                    <div className="col-12 col-lg-4">
+                        <Sidebar />
                     </div>
-                </motion.div>
-                {popup.visible && (
-                    <motion.div
-                        className="popup-overlay"
-                        onClick={closePopup}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <motion.div
-                            className="popup-content"
-                            onClick={(e) => e.stopPropagation()}
-                            initial={{ scale: 0.8, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.8, opacity: 0 }}
-                            transition={{ duration: 0.5, ease: "easeOut" }}
-                        >
-                            <button className="close-popup" onClick={closePopup}>X</button>
-                            <h4>{popup.details.title}</h4>
-                            <div className="project-objective">
-                                <p><span>Objective :</span> {popup.details.objectives}</p>
-                            </div>
-                            <div className="project-key-features">
-                                <span>Key Features:</span>
-                                <ul>
-                                    {popup.details.key.map((key, i) => (
-                                        <li key={i}><TbCircleDot />{key}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="project-challenges">
-                                <p><span>Challenges Faced:</span> {popup.details.challenges}</p>
-                            </div>
-                            <div className="project-tags">
-                                Tech Stack:
-                                {popup.details.tags.map((tag, i) => (
-                                    <button key={i}>{tag}</button>
-                                ))}
-                            </div>
-                            {popup.details.link && (
-                                <a
-                                    href={popup.details.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="project-link"
-                                >
-                                    View Project
-                                </a>
-                            )}
-                        </motion.div>
-                    </motion.div>
-                )}
-            </section >
-            <section className="project-section-mobile">
-                <motion.div
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-12">
-                                <div className="sidebar">
-                                    <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
-                                    <h4>Suriya Prakash</h4>
-                                    <p>Building smart and effective web solutions.</p>
-                                    <div className="siderbar-icons">
-                                        <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
-                                        <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                                        <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                                        {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                                        <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-12">
-                                <motion.div
-                                    className="home-page-content"
-                                >
-                                    <h1>Recent<br /><span>Projects</span></h1>
-                                    <div className="projects-lists">
-                                        {projects.map((project, index) => (
-                                            <div
-                                                className="projects"
-                                                key={index}
-                                                onClick={() => handlePopup(project)}
-                                            >
-                                                <div className="row">
-                                                    <div className="col-md-3">
-                                                        <div className="project-thumbnail">
-                                                            <img className="img-fluid" src={project.thumbnail} alt="thumbnail" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-9">
-                                                        <div className="project-details">
-                                                            <h4>{project.title} <GoArrowUpRight /></h4>
-                                                            <p>{project.description}</p>
-                                                            <div className="project-tags">
-                                                                {project.tags.map((tag, i) => (
-                                                                    <button key={i}>{tag}</button>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
-                {popup.visible && (
-                    <motion.div
-                        className="popup-overlay"
-                        onClick={closePopup}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <motion.div
-                            className="popup-content"
-                            onClick={(e) => e.stopPropagation()}
-                            initial={{ scale: 0.8, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.8, opacity: 0 }}
-                            transition={{ duration: 0.5, ease: "easeOut" }}
-                        >
-                            <button className="close-popup" onClick={closePopup}>X</button>
-                            <h4>{popup.details.title}</h4>
-                            <div className="project-objective">
-                                <p><span>Objective :</span> {popup.details.objectives}</p>
-                            </div>
-                            <div className="project-key-features">
-                                <span>Key Features:</span>
-                                <ul>
-                                    {popup.details.key.map((key, i) => (
-                                        <li key={i}><TbCircleDot />{key}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="project-challenges">
-                                <p><span>Challenges Faced:</span> {popup.details.challenges}</p>
-                            </div>
-                            <div className="project-tags">
-                                Tech Stack:
-                                {popup.details.tags.map((tag, i) => (
-                                    <button key={i}>{tag}</button>
-                                ))}
-                            </div>
-                            {popup.details.link && (
-                                <a
-                                    href={popup.details.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="project-link"
-                                >
-                                    View Project
-                                </a>
-                            )}
-                        </motion.div>
-                    </motion.div>
-                )}
 
-            </section >
-        </>
-    )
-}
+                    {/* Content Column */}
+                    <div className="col-12 col-lg-8">
+                        <motion.div
+                            ref={contentRef}
+                            className="projects-container"
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                        >
+                            <div className="section-header">
+                                <span className="subtitle">PORTFOLIO</span>
+                                <h2>
+                                    Recent <span>Projects</span>
+                                </h2>
+                            </div>
+
+                            <div className="projects-grid">
+                                {PROJECTS_DATA.map((project, index) => (
+                                    <motion.div
+                                        className="project-card"
+                                        key={index}
+                                        onClick={() => handlePopup(project)}
+                                        whileHover={{ y: -4 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        <div className="project-card-inner">
+                                            <div className="project-thumbnail-wrapper">
+                                                <img
+                                                    src={project.thumbnail}
+                                                    alt={project.title}
+                                                    className="project-thumbnail"
+                                                />
+                                            </div>
+                                            <div className="project-info">
+                                                <div className="project-title-row">
+                                                    <h3>{project.title}</h3>
+                                                    <div className="arrow-icon-wrapper">
+                                                        <GoArrowUpRight />
+                                                    </div>
+                                                </div>
+                                                <p className="project-desc">{project.description}</p>
+                                                <div className="tags-wrapper">
+                                                    {project.tags.map((tag, i) => (
+                                                        <span key={i} className="tech-badge">
+                                                            {tag}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Modal / Popup Details */}
+            <AnimatePresence>
+                {popup.visible && popup.details && (
+                    <motion.div
+                        className="popup-overlay"
+                        onClick={closePopup}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <motion.div
+                            className="popup-modal"
+                            onClick={(e) => e.stopPropagation()}
+                            initial={{ scale: 0.95, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.95, opacity: 0, y: 20 }}
+                            transition={{ duration: 0.25 }}
+                        >
+                            <button
+                                className="close-popup"
+                                onClick={closePopup}
+                                aria-label="Close modal"
+                            >
+                                &times;
+                            </button>
+
+                            <div className="popup-header">
+                                <h3>{popup.details.title}</h3>
+                            </div>
+
+                            <div className="popup-body">
+                                <div className="modal-section">
+                                    <h4>Objective</h4>
+                                    <p>{popup.details.objectives}</p>
+                                </div>
+
+                                <div className="modal-section">
+                                    <h4>Key Features</h4>
+                                    <ul className="features-list">
+                                        {popup.details.key.map((item, i) => (
+                                            <li key={i}>
+                                                <TbCircleDot className="feature-bullet" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className="modal-section">
+                                    <h4>Challenges Faced</h4>
+                                    <p>{popup.details.challenges}</p>
+                                </div>
+
+                                <div className="modal-section">
+                                    <h4>Tech Stack</h4>
+                                    <div className="tags-wrapper">
+                                        {popup.details.tags.map((tag, i) => (
+                                            <span key={i} className="tech-badge">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </section>
+    );
+};
 
 export default Projects;

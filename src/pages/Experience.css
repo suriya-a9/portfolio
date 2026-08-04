@@ -1,63 +1,220 @@
-section.experience-section {
-    margin-top: 100px;
-    margin-bottom: 100px;
+.experience-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
-h4.experience-title {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
+.experience-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 48px;
+    align-items: start;
 }
 
-h4.experience-title img {
-    background: white;
-    border-radius: 50px;
-    width: 7%;
+.experience-sidebar {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    position: sticky;
+    top: 100px;
 }
 
-h4.experience-title span {
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
-}
-
-h2.title-experience {
-    font-size: 60px;
-    color: #998f8f;
-    font-weight: bold;
-    margin-top: 60px;
-    margin-bottom: 45px;
-}
-
-.education-div img {
-    background: white;
+.sidebar-avatar {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    width: 65px;
-    height: 65px;
+    object-fit: cover;
+    margin-bottom: 16px;
 }
 
-.education-div-content {
-    margin-left: 10px;
+.sidebar-name {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
 }
 
-@media(max-width: 768px) {
-    section.experience-section .home-page-content {
-        padding-left: 0px;
+.sidebar-bio {
+    color: #a1a1aa;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 24px 0;
+}
+
+.sidebar-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.sidebar-icons a {
+    color: #a1a1aa;
+    font-size: 22px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.sidebar-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.page-heading {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin: 0;
+}
+
+.page-heading span {
+    color: #a1a1aa;
+}
+
+.section-title {
+    font-size: 42px;
+    color: #71717a;
+    font-weight: 700;
+    margin: 32px 0 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+}
+
+.experience-item {
+    margin-bottom: 32px;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.company-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ffffff;
+    flex-shrink: 0;
+}
+
+.company-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.duration-tag {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a1a1aa;
+}
+
+.description-text {
+    color: #d4d4d8;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.education-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.institution-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ffffff;
+    flex-shrink: 0;
+}
+
+.institution-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.institution-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.degree-title {
+    color: #a1a1aa;
+    font-size: 15px;
+    margin: 0;
+}
+
+.cert-link {
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+    transition: color 0.2s ease;
+}
+
+.cert-link:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+@media (max-width: 868px) {
+    .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
 
-    section.experience-section-mobile {
-        display: none;
+    .experience-sidebar {
+        position: static;
+        width: 100%;
+        box-sizing: border-box;
     }
-}
 
-@media(min-width: 900px) {
-    section.experience-section-mobile {
-        display: none;
+    .page-heading {
+        font-size: 36px;
     }
-}
 
-@media (min-width: 768px) and (max-width: 900px) {
-    section.experience-section {
-        display: none;
+    .section-title {
+        font-size: 32px;
+    }
+
+    .company-title,
+    .institution-title {
+        font-size: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
     }
 }

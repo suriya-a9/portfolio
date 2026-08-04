@@ -1,110 +1,92 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FiDownload } from "react-icons/fi";
 import { TbBrandGithub } from "react-icons/tb";
+import { FiLinkedin, FiDownload } from "react-icons/fi";
+import { GoMail } from "react-icons/go";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { PiDevToLogo } from "react-icons/pi";
-import { TfiReddit } from "react-icons/tfi";
-import { FiLinkedin } from "react-icons/fi";
-import { GoMail } from "react-icons/go";
+import "./Home.css";
 import "./About.css";
+
 const About = () => {
   const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { once: true });
+  const isInView = useInView(contentRef, { once: true, margin: "-50px" });
+
   return (
-    <>
-      <section className="about-section">
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
+    <section className="about-section">
+      <motion.div
+        className="about-layout"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <aside className="about-sidebar">
+          <img className="sidebar-avatar" src="assets/profile-image.png" alt="Suriya Prakash" />
+          <h4 className="sidebar-name">Suriya Prakash</h4>
+          <p className="sidebar-bio">Building smart and effective web solutions.</p>
+          <div className="sidebar-icons">
+            <a href="https://github.com/suriya-a9" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <TbBrandGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <FiLinkedin />
+            </a>
+            <a href="mailto:uriyaprakash@gmail.com" aria-label="Email">
+              <GoMail />
+            </a>
+          </div>
+        </aside>
+
+        <motion.main
+          ref={contentRef}
+          className="about-content"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12 col-md-4">
-                <div className="sidebar">
-                  <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
-                  <h4>Suriya Prakash</h4>
-                  <p>Building smart and effective web solutions.</p>
-                  <div className="siderbar-icons">
-                    <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
-                    <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                    <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                    {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-8">
-                <motion.div
-                  ref={contentRef}
-                  className="home-page-content"
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                  <h1>About<br /><span>Me</span></h1>
-                  <div className="about-me">
-                    <p>Hi, I’m Suriya Prakash, a skilled web developer specializing in building responsive frontends with React.js and scalable backends using the MERN stack. Passionate about creating impactful digital solutions, I turn ideas into reality with clean and efficient code.</p>
-                    <h4>Contact Me</h4>
-                    <div className="contact">
-                      <a href="tel:+916384820056"><FaPhoneAlt /> +91 63848 20056</a>
-                      <a href="mailto:uriyaprakash@gmail.com"><IoMdMail /> uriyaprakash@gmail.com</a>
-                    </div>
-                    📄 <a className="resume" target="_blank" href="assets/Suriya_Prakash_MERN_Stack_Resume.pdf">See My Resume <FiDownload /></a>
-                  </div>
-                </motion.div>
+          <h1 className="page-heading">
+            About<br />
+            <span>Me</span>
+          </h1>
+
+          <div className="about-body">
+            <p className="about-text">
+              Hi, I’m Suriya Prakash, Full Stack Developer with 3.5+ years of experience building web apps using PostgreSQL, MongoDB, Express.js, React.js, and Node.js (PERN/MERN stack).
+            </p>
+            <p className="about-text">
+              I've worked on CMS platforms, e-commerce applications, and SaaS products, developing responsive React frontends, building scalable Node.js APIs, and designing efficient database solutions. I have worked on AI integrations, including implementing Claude API-powered chatbots and Retrieval-Augmented Generation (RAG) to build smarter, context-aware applications.
+            </p>
+            <p className="about-text">
+              Always up for learning new tech and building things that solve real problems. Let's connect if you'd like to talk tech, collaboration, or opportunities.
+            </p>
+
+            <div className="contact-block">
+              <h2 className="section-title">Contact Me</h2>
+              <div className="contact-links">
+                <a href="tel:+916384820056" className="contact-item">
+                  <FaPhoneAlt /> <span>+91 63848 20056</span>
+                </a>
+                <a href="mailto:uriyaprakash@gmail.com" className="contact-item">
+                  <IoMdMail /> <span>uriyaprakash@gmail.com</span>
+                </a>
               </div>
             </div>
-          </div>
-        </motion.div>
-      </section >
-      <section className="about-section-mobile">
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12">
-                <div className="sidebar">
-                  <img className="img-fluid" src={"assets/profile-image.png"} alt="img" />
-                  <h4>Suriya Prakash</h4>
-                  <p>Building smart and effective web solutions.</p>
-                  <div className="siderbar-icons">
-                    <a href="https://github.com/suriya-a9" target="_blank"><TbBrandGithub /></a>
-                    <a href="https://www.linkedin.com/in/suriya-prakash-30885818a" target="_blank"><FiLinkedin /></a>
-                    <a href="mailto:uriyaprakash@gmail.com"><GoMail /></a>
-                    {/* <a href="https://dev.to/da_faq"><PiDevToLogo /></a>
-                    <a href="https://www.reddit.com/user/stanelyvkf/submitted/"><TfiReddit /></a> */}
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-12">
-                <motion.div
-                  className="home-page-content"
-                >
-                  <h1>About<br /><span>Me</span></h1>
-                  <div className="about-me">
-                    <p>Hi, I’m Suriya Prakash, skilled web developer specializing in building responsive frontends with React.js and scalable backends using the MERN stack. Passionate about creating impactful digital solutions, I turn ideas into reality with clean and efficient code.</p>
-                    <h4>Contact Me</h4>
-                    <div className="contact">
-                      <a href="tel:+916384820056"><FaPhoneAlt /> +91 63848 20056</a>
-                      <a href="mailto:uriyaprakash@gmail.com"><IoMdMail /> uriyaprakash@gmail.com</a>
-                    </div>
-                    📄 <a className="resume" href="assets/resume.pdf" download="Suriya_Prakash_MERN_Stack_Resume.pdf">See My Resume <FiDownload /></a>
-                  </div>
-                </motion.div>
-              </div>
+
+            <div className="resume-block">
+              <a
+                className="resume-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="assets/Suriya_Prakash_MERN_Stack_Resume.pdf"
+              >
+                <span>See My Resume</span>
+                <FiDownload />
+              </a>
             </div>
           </div>
-        </motion.div>
-      </section >
-    </>
+        </motion.main>
+      </motion.div>
+    </section>
   );
 };
 
