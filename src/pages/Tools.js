@@ -39,6 +39,10 @@ const Tools = () => {
                                         <img src="assets/node-js-logo.webp" alt="Node.js" />
                                     </div>
                                 </div>
+                                <p className="tools-note">
+                                    Proficient in building responsive web applications using HTML, CSS,
+                                    JavaScript, and Node.js for frontend and backend development.
+                                </p>
                             </div>
 
                             <div className="tools-category">
@@ -58,6 +62,38 @@ const Tools = () => {
                                         <img src="assets/expressjs.png" alt="Express.js" />
                                     </div>
                                 </div>
+                                <p className="tools-note">
+                                    Experienced with React, Express.js, and Tailwind CSS to 
+                                    build modern, scalable, and responsive web applications.
+                                </p>
+                            </div>
+
+                            <div className="tools-category">
+                                <div className="section-header">
+                                    <h2>
+                                        AI <span>Integrations</span>
+                                    </h2>
+                                </div>
+
+                                <div className="tools-grid">
+                                    <div className="tool-card">
+                                        <img src="assets/claude.webp" alt="Claude API" />
+                                    </div>
+
+                                    <div className="tool-card">
+                                        <img src="assets/voyage.webp" alt="Voyage AI" />
+                                    </div>
+
+                                    <div className="tool-card tool-card-wide tool-card-light">
+                                        <img src="assets/pgvector.png" alt="pgvector" />
+                                    </div>
+                                </div>
+                                <p className="tools-note">
+                                    Experienced integrating Claude API for conversational AI,
+                                    Voyage AI for embeddings, and pgvector with PostgreSQL for
+                                    semantic search and Retrieval-Augmented Generation (RAG)
+                                    in a SaaS chatbot platform.
+                                </p>
                             </div>
 
                             <div className="tools-category">
@@ -77,6 +113,10 @@ const Tools = () => {
                                         <img src="assets/postgre-sql-logo.webp" alt="PostgreSQL" />
                                     </div>
                                 </div>
+                                <p className="tools-note">
+                                    Worked with MySQL, MongoDB, and PostgreSQL for designing 
+                                    schemas, optimizing queries, and managing application data.
+                                </p>
                             </div>
 
                             <div className="tools-category">
@@ -93,6 +133,10 @@ const Tools = () => {
                                         <img src="assets/GitHub-Logo.webp" alt="GitHub" />
                                     </div>
                                 </div>
+                                <p className="tools-note">
+                                    Use Git and GitHub for version control, collaborative 
+                                    development, code reviews, and deployment workflows.
+                                </p>
                             </div>
 
                             <div className="tools-category">
@@ -112,6 +156,10 @@ const Tools = () => {
                                         <img src="assets/composer-logo.webp" alt="Composer" />
                                     </div>
                                 </div>
+                                <p className="tools-note">
+                                    Develop applications using Visual Studio Code, npm, and 
+                                    Composer to streamline development and dependency management.
+                                </p>
                             </div>
                         </motion.main>
                     </div>
