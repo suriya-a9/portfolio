@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TbBrandGithub, TbCircleDot } from "react-icons/tb";
-import { FiLinkedin } from "react-icons/fi";
+import { FiLinkedin, FiSend } from "react-icons/fi";
 import { GoMail } from "react-icons/go";
 import "./Home.css";
 
@@ -37,18 +37,18 @@ const Home = () => {
                 <span className="pulse-dot"></span> Available for work
               </div>
 
-              <div className="profile-img-container">
-                <img
-                  className="profile-img"
-                  src="assets/profile-image.png"
-                  alt="Suriya Prakash"
-                />
+              <div className="profile-avatar-initials">
+                <span>SP</span>
               </div>
 
               <h3 className="profile-name">Suriya Prakash</h3>
               <p className="profile-bio">
                 Building smart, sleek, and high-performance web solutions.
               </p>
+
+              <a href="mailto:uriyaprakash@gmail.com" className="sidebar-cta-btn">
+                <FiSend /> Get in Touch
+              </a>
 
               <div className="sidebar-icons">
                 <a href="https://github.com/suriya-a9" target="_blank" rel="noreferrer" aria-label="GitHub">

@@ -60,7 +60,7 @@ body {
 
 .main-grid {
     display: grid;
-    grid-template-columns: 340px 1fr;
+    grid-template-columns: 320px 1fr;
     gap: 32px;
     position: relative;
     z-index: 1;
@@ -70,7 +70,7 @@ body {
     position: sticky;
     top: 40px;
     height: fit-content;
-    padding: 32px 24px;
+    padding: 36px 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,7 +88,7 @@ body {
     font-weight: 500;
     padding: 6px 14px;
     border-radius: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .pulse-dot {
@@ -114,39 +114,75 @@ body {
     }
 }
 
-.profile-img-container {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    padding: 4px;
-    background: linear-gradient(135deg, var(--accent-color), transparent);
-    margin-bottom: 20px;
+.profile-avatar-initials {
+    width: 100px;
+    height: 100px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(244, 108, 56, 0.2), rgba(99, 102, 241, 0.2));
+    border: 1px solid rgba(244, 108, 56, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 25px var(--accent-glow);
+    transition: transform 0.3s ease;
 }
 
-.profile-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+.profile-avatar-initials:hover {
+    transform: scale(1.05);
+}
+
+.profile-avatar-initials span {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #fff 30%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .profile-name {
     font-size: 26px;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .profile-bio {
     color: var(--text-muted);
     font-size: 14px;
     line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.sidebar-cta-btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 14px;
+    text-decoration: none;
     margin-bottom: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px var(--accent-glow);
+}
+
+.sidebar-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(244, 108, 56, 0.4);
 }
 
 .sidebar-icons {
     display: flex;
-    gap: 16px;
+    gap: 14px;
+    width: 100%;
+    justify-content: center;
 }
 
 .sidebar-icons a {

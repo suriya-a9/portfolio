@@ -1,8 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { GoArrowUpRight, GoMail } from "react-icons/go";
-import { TbBrandGithub, TbCircleDot } from "react-icons/tb";
-import { FiLinkedin } from "react-icons/fi";
+import { GoArrowUpRight } from "react-icons/go";
+import { TbCircleDot } from "react-icons/tb";
 import "./Projects.css";
 
 const PROJECTS_DATA = [
@@ -112,41 +111,6 @@ const PROJECTS_DATA = [
     },
 ];
 
-const Sidebar = () => (
-    <div className="sidebar-card">
-        <div className="profile-img-wrapper">
-            <img
-                className="profile-img"
-                src="assets/profile-image.png"
-                alt="Suriya Prakash Profile"
-            />
-        </div>
-        <h3 className="profile-name">Suriya Prakash</h3>
-        <p className="profile-tagline">Building smart and effective web solutions.</p>
-        <div className="social-links">
-            <a
-                href="https://github.com/suriya-a9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-            >
-                <TbBrandGithub />
-            </a>
-            <a
-                href="https://www.linkedin.com/in/suriya-prakash-30885818a"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-            >
-                <FiLinkedin />
-            </a>
-            <a href="mailto:uriyaprakash@gmail.com" aria-label="Email">
-                <GoMail />
-            </a>
-        </div>
-    </div>
-);
-
 const Projects = () => {
     const contentRef = useRef(null);
     const isInView = useInView(contentRef, { once: true });
@@ -165,12 +129,8 @@ const Projects = () => {
     return (
         <section className="project-section">
             <div className="container">
-                <div className="row g-4">
-                    <div className="col-12 col-lg-4">
-                        <Sidebar />
-                    </div>
-
-                    <div className="col-12 col-lg-8">
+                <div className="row justify-content-center">
+                    <div className="col-12 col-lg-10 col-xl-9">
                         <motion.div
                             ref={contentRef}
                             className="projects-container"

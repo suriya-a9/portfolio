@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Container from "react-bootstrap/Container";
 import { BiHomeAlt } from "react-icons/bi";
 import { FaRegFolder } from "react-icons/fa6";
 import { LuBriefcase } from "react-icons/lu";
 import { LiaToolsSolid } from "react-icons/lia";
 import { FiEdit } from "react-icons/fi";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
-import { Tooltip, TooltipProvider } from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import "./App.css";
 import Footer from "./pages/Footer";
@@ -22,16 +17,13 @@ import Experience from "./pages/Experience";
 import Tools from "./pages/Tools";
 
 const App = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
   const location = useLocation();
   const [loading, setLoading] = useState(false);
 
